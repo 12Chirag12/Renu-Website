@@ -4,8 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { CTABanner } from "@/components/ui/CTABanner";
-import { ProductCatalogue } from "./ProductCatalogue";
-import { DosageExplorer } from "./DosageExplorer";
+import { DosageExplorer } from "@/components/products/DosageExplorer";
 
 export const metadata: Metadata = {
   title: "Products & Formulations — Tablets & Capsules",
@@ -124,22 +123,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Product Catalogue Section */}
-      <section className="bg-mist py-24 sm:py-32">
-        <div className="container-shell">
-          <SectionHeading
-            kicker="Approved Product Records"
-            title="Tablets & Capsules Product Catalogue."
-            body="Search and filter through approved product specifications. As new products are verified by our regulatory team, they appear directly in this catalogue."
-          />
-          <div className="mt-12">
-            <ProductCatalogue />
-          </div>
-          <p className="mt-5 text-xs text-slate-500">
-            Product availability, registrations, and regulatory status may vary by territory.
-          </p>
-        </div>
-      </section>
 
       <CTABanner
         kicker="Need a custom formulation?"

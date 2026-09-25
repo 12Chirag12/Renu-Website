@@ -79,14 +79,36 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* Map placeholder */}
-          <div className="mt-8 grid min-h-64 place-items-center rounded-3xl border border-dashed border-slate-300 bg-mist text-center">
-            <div>
-              <Icon name="pin" className="mx-auto h-7 w-7 text-petrol" />
-              <p className="mt-3 font-bold text-navy">Map location pending confirmation</p>
-              <p className="mt-1 text-xs text-slate-500">
-                A verified map embed can be added once the company address is supplied.
-              </p>
+          {/* Verified Google Maps Location */}
+          <div className="mt-10 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lift">
+            <div className="flex flex-col gap-2 border-b border-slate-100 bg-mist/60 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-2.5">
+                <span className="grid h-8 w-8 place-items-center rounded-lg bg-navy text-cyan text-xs">
+                  <Icon name="pin" className="h-4 w-4" />
+                </span>
+                <div>
+                  <h3 className="text-sm font-bold text-navy">Renumed Pharmaceutical Labs</h3>
+                  <p className="text-[.72rem] text-slate-500">Manufacturing Facility & Works</p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/place/Renumed+pharmaceutical+labs/@19.6857319,72.7593648,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-petrol transition hover:text-navy"
+              >
+                Open in Google Maps <Icon name="arrow" className="h-3.5 w-3.5" />
+              </a>
+            </div>
+            <div className="relative aspect-[16/9] w-full min-h-[380px] sm:min-h-[440px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.6312380295267!2d72.75936477498101!3d19.68573188164846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71d4e08832b97%3A0xe4c0392c9d1ce6db!2sRenumed%20pharmaceutical%20labs!5e0!3m2!1sen!2sin!4v1790333823163!5m2!1sen!2sin"
+                className="absolute inset-0 h-full w-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Renumed Pharmaceutical Labs Location Map"
+              />
             </div>
           </div>
         </div>

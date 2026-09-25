@@ -13,12 +13,8 @@ export const company = {
 } as const;
 
 export const capabilityPlaceholders = [
-  { name: "Tablets", code: "TB", note: "Manufacturing capability to be confirmed" },
-  { name: "Capsules", code: "CP", note: "Manufacturing capability to be confirmed" },
-  { name: "Powders", code: "PW", note: "Manufacturing capability to be confirmed" },
-  { name: "Liquids", code: "LQ", note: "Manufacturing capability to be confirmed" },
-  { name: "External preparations", code: "EX", note: "Manufacturing capability to be confirmed" },
-  { name: "Primary & secondary packaging", code: "PK", note: "Packaging capability to be confirmed" },
+  { name: "Tablets", code: "TB", note: "Solid oral dosage form — comprehensive tablet manufacturing capabilities" },
+  { name: "Capsules", code: "CP", note: "Solid oral dosage form — hard gelatin & vegetarian capsule manufacturing" },
 ] as const;
 
 export const servicePlaceholders = [

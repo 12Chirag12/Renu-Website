@@ -29,11 +29,17 @@ section[id] { scroll-margin-top: 92px; }
   outline-offset: 3px;
 }
 
+/* ── Layout ─────────────────────────────────────────── */
 .container-shell {
-  width: min(1180px, calc(100% - 40px));
+  width: min(1220px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.container-narrow {
+  width: min(960px, calc(100% - 40px));
   margin-inline: auto;
 }
 
+/* ── Typography ─────────────────────────────────────── */
 .display-face {
   font-family: "Segoe UI Variable Display", "Segoe UI", Inter, Arial, sans-serif;
   letter-spacing: -.045em;
@@ -59,6 +65,7 @@ section[id] { scroll-margin-top: 92px; }
 }
 .section-kicker.on-dark { color: #7fe4ed; }
 
+/* ── Patterns ───────────────────────────────────────── */
 .grid-pattern {
   background-image:
     linear-gradient(rgba(8, 107, 120, .07) 1px, transparent 1px),
@@ -67,18 +74,7 @@ section[id] { scroll-margin-top: 92px; }
   mask-image: linear-gradient(to bottom, black, transparent 86%);
 }
 
-.soft-orb::after {
-  content: "";
-  position: absolute;
-  inset: auto auto -100px -80px;
-  width: 330px;
-  height: 330px;
-  border-radius: 999px;
-  background: rgba(25, 182, 207, .12);
-  filter: blur(15px);
-  pointer-events: none;
-}
-
+/* ── Form Fields ────────────────────────────────────── */
 .field {
   width: 100%;
   border: 1px solid #d8e2e7;
@@ -86,6 +82,7 @@ section[id] { scroll-margin-top: 92px; }
   background: white;
   padding: .77rem .9rem;
   color: var(--ink);
+  font-size: .9rem;
   transition: border-color .2s ease, box-shadow .2s ease;
 }
 .field::placeholder { color: #91a0aa; }
@@ -97,13 +94,29 @@ section[id] { scroll-margin-top: 92px; }
 }
 .field[aria-invalid="true"] { border-color: #d14d4d; }
 
+/* ── Card Effects & Micro-Interactions ──────────────── */
 .reveal-card {
-  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+  position: relative;
+  transition: transform .32s cubic-bezier(.16,1,.3,1), border-color .32s ease, box-shadow .32s cubic-bezier(.16,1,.3,1);
 }
 .reveal-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(8, 107, 120, .25);
-  box-shadow: 0 24px 60px -38px rgba(7, 42, 68, .42);
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(25, 182, 207, .4);
+  box-shadow: 0 20px 40px -15px rgba(8, 45, 79, .18), 0 0 24px -6px rgba(25, 182, 207, .15);
+}
+
+.reveal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(800px circle at var(--mouse-x, 100px) var(--mouse-y, 100px), rgba(25, 182, 207, .06), transparent 40%);
+  opacity: 0;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+.reveal-card:hover::before {
+  opacity: 1;
 }
 
 .marquee-line { position: relative; overflow: hidden; }
@@ -113,17 +126,114 @@ section[id] { scroll-margin-top: 92px; }
   inset: auto 0 0;
   height: 2px;
   background: linear-gradient(90deg, var(--cyan), var(--petrol), transparent 78%);
+  transition: transform .4s ease;
+}
+.marquee-line:hover::after {
+  transform: scaleX(1.08);
 }
 
+/* ── Glow & Glass Effects ───────────────────────────── */
+.glass-panel {
+  background: rgba(255, 255, 255, .82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, .7);
+  box-shadow: 0 16px 36px -12px rgba(8, 45, 79, .1);
+}
+
+.glass-panel-dark {
+  background: rgba(8, 45, 79, .72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(25, 182, 207, .18);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, .4);
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  pointer-events: none;
+  animation: pulse-glow 7s ease-in-out infinite alternate;
+}
+
+.interactive-pill {
+  transition: all .25s cubic-bezier(.2,0,0,1);
+}
+.interactive-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(8, 107, 120, .2);
+}
+
+/* ── Button Shimmer & Sheen ─────────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all .25s ease;
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.16) 40%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform .65s ease;
+}
+.btn-primary:hover::after {
+  transform: translateX(100%);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -6px rgba(8, 45, 79, .35);
+}
+
+/* ── Keyframe Animations ────────────────────────────── */
 @keyframes rise {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-rise { animation: rise .7s cubic-bezier(.22,1,.36,1) both; }
-.animate-rise-delay { animation: rise .7s .12s cubic-bezier(.22,1,.36,1) both; }
+.animate-rise { animation: rise .7s cubic-bezier(.16,1,.3,1) both; }
+.animate-rise-delay { animation: rise .7s .18s cubic-bezier(.16,1,.3,1) both; }
+.animate-rise-delay-2 { animation: rise .7s .32s cubic-bezier(.16,1,.3,1) both; }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+.animate-float {
+  animation: float 4.5s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 5.2s 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(1) translate(0, 0); opacity: .35; }
+  50% { transform: scale(1.12) translate(10px, -12px); opacity: .65; }
+  100% { transform: scale(0.96) translate(-8px, 6px); opacity: .35; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 640px) {
-  .container-shell { width: min(100% - 28px, 1180px); }
+  .container-shell { width: min(100% - 28px, 1220px); }
+  .container-narrow { width: min(100% - 28px, 960px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

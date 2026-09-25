@@ -1,14 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
-import { Icon, type IconName } from "@/components/ui/Icon";
+import { Icon } from "@/components/ui/Icon";
 import {
   machineryData,
   totalMachineryCount,
   productionMachineryCount,
   packingMachineryCount,
-  type MachineItem,
   type SectionGroup,
 } from "@/data/machinery";
 
@@ -41,11 +39,9 @@ export function MachineryExplorer() {
   const [activeFilter, setActiveFilter] = useState<FilterId>("all");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Filter sections and machines based on activeFilter and searchQuery
   const filteredSections = useMemo(() => {
     return machineryData
       .map((section) => {
-        // Filter by section or department
         if (activeFilter === "production" && section.department !== "Production") {
           return null;
         }
@@ -61,7 +57,6 @@ export function MachineryExplorer() {
           return null;
         }
 
-        // Filter machines within section by search query
         const query = searchQuery.trim().toLowerCase();
         const matchedMachines = query
           ? section.machines.filter(
@@ -88,7 +83,7 @@ export function MachineryExplorer() {
 
   return (
     <div className="space-y-12">
-      {/* ── 2. Manufacturing Facilities Overview (Department Cards) ── */}
+      {/* ── Department Cards ── */}
       <div className="grid gap-6 md:grid-cols-2">
         {/* Production Department Card */}
         <div
@@ -177,7 +172,7 @@ export function MachineryExplorer() {
         </div>
       </div>
 
-      {/* ── 3. Machinery Filter & Search Controls ── */}
+      {/* ── Filter & Search Controls ── */}
       <div id="machinery" className="scroll-mt-24 space-y-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
@@ -245,7 +240,7 @@ export function MachineryExplorer() {
         </div>
       </div>
 
-      {/* ── 4. Sections & Machine Cards Display ── */}
+      {/* ── Sections & Machine Cards Display ── */}
       {filteredSections.length > 0 ? (
         <div className="space-y-12">
           {filteredSections.map((sec) => (

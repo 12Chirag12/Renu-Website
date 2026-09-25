@@ -77,17 +77,17 @@ function Hero() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-[2.2rem] border border-white/60 bg-slate-200 shadow-2xl shadow-navy/20 lg:h-full lg:aspect-auto">
             <Image
               src="/images/hero-manufacturing.png"
-              alt="Technicians inspecting a pharmaceutical manufacturing line in a clean production area"
+              alt="Indian pharmaceutical chemist conducting quality testing and analytical HPLC operation in cleanroom facility"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 54vw"
-              className="object-cover transition duration-700 hover:scale-105"
+              className="object-cover object-[75%_center] sm:object-center transition duration-700 hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" />
           </div>
 
           {/* Floating Pill Card 1: Top Right */}
-          <div className="animate-float absolute -top-5 -right-3 hidden rounded-2xl border border-white/80 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
+          <div className="animate-float absolute -top-4 -right-2 hidden rounded-2xl border border-white/80 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-cyan/15 text-petrol">
               <span className="text-xs font-bold">TB</span>
             </span>
@@ -97,8 +97,8 @@ function Hero() {
             </div>
           </div>
 
-          {/* Floating Pill Card 2: Bottom Left */}
-          <div className="animate-float-delayed absolute -bottom-6 left-5 right-5 rounded-2xl border border-white/80 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:left-auto sm:right-6 sm:w-80">
+          {/* Floating Pill Card 2: Bottom Left (positioned left to keep the Indian chemist fully visible on right) */}
+          <div className="animate-float-delayed absolute -bottom-6 left-5 right-5 rounded-2xl border border-white/80 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:left-6 sm:right-auto sm:w-80">
             <div className="flex gap-3">
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-navy text-cyan">
                 <Icon name="shield" className="h-5 w-5" />

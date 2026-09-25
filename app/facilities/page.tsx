@@ -5,7 +5,7 @@ import { Icon } from "@/components/ui/Icon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
 import { CTABanner } from "@/components/ui/CTABanner";
-import { MachineryExplorer } from "./MachineryExplorer";
+import { MachineryExplorer } from "@/components/facilities/MachineryExplorer";
 import { totalMachineryCount } from "@/data/machinery";
 
 export const metadata: Metadata = {
@@ -81,30 +81,30 @@ export default function FacilitiesPage() {
               </div>
             </div>
 
-            {/* High-quality Pharmaceutical Manufacturing Visual */}
+            {/* Indian Pharmaceutical Laboratory & Analytical Suite Visual */}
             <div className="relative animate-rise-delay">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[2.2rem] border border-white/80 bg-slate-200 shadow-2xl shadow-navy/20 lg:aspect-[1.15/1]">
                 <Image
                   src="/images/quality-laboratory.png"
-                  alt="Modern pharmaceutical laboratory with analytical inspection equipment and clean workstations"
+                  alt="Indian pharmaceutical analytical chemists conducting testing and quality control in modern laboratory"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover transition duration-700 hover:scale-105"
+                  className="object-cover object-[70%_center] sm:object-center transition duration-700 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                 <div className="absolute inset-x-5 bottom-5 rounded-2xl bg-navy/90 p-4 text-white backdrop-blur-md border border-white/10 sm:p-5">
                   <div className="flex items-center justify-between">
                     <span className="text-[.68rem] font-bold uppercase tracking-[.15em] text-cyan">
-                      Illustrative Facility Visual
+                      Quality Control & Analytical Suites
                     </span>
-                    <span className="text-[.68rem] text-white/50">Controlled Environment</span>
+                    <span className="text-[.68rem] text-white/50">In-Process Testing</span>
                   </div>
                   <p className="mt-1 font-bold text-sm sm:text-base">
-                    Controlled Tablet Compression & Packaging Suites
+                    Analytical Testing & Quality Assurance Suites
                   </p>
-                  <p className="mt-0.5 text-xs text-white/60">
-                    Photographs are representative illustrative visuals pending verified site photography.
+                  <p className="mt-0.5 text-xs text-white/70">
+                    Comprehensive testing infrastructure supporting tablet compression and capsule encapsulation.
                   </p>
                 </div>
               </div>

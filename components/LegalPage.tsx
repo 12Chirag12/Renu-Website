@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function LegalPage({
   eyebrow,
   title,
@@ -16,12 +14,6 @@ export function LegalPage({
       {/* Page hero */}
       <section className="bg-navy py-12 text-white sm:py-16">
         <div className="container-shell">
-          <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-1.5 text-xs text-white/50">
-              <li><Link href="/" className="transition hover:text-white">Home</Link></li>
-              <li className="flex items-center gap-1.5"><span>/</span><span className="text-white/80 font-medium">{title}</span></li>
-            </ol>
-          </nav>
           <span className="section-kicker on-dark">{eyebrow}</span>
           <h1 className="display-face mt-4 text-3xl font-semibold sm:text-4xl">{title}</h1>
           <p className="mt-3 text-sm text-white/50">Last updated: {updated}</p>

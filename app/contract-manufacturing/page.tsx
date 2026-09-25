@@ -49,7 +49,6 @@ export default function ContractManufacturingPage() {
       <PageHero
         title="Pharmaceutical Contract Manufacturing"
         description="Reliable, quality-focused manufacturing partnerships designed around your product requirements and business objectives."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contract Manufacturing" }]}
       />
 
       {/* Introduction */}

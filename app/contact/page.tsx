@@ -18,7 +18,6 @@ export default function ContactPage() {
       <PageHero
         title="Contact & Enquiry"
         description="Start a focused conversation about your pharmaceutical manufacturing requirement. We respond to every enquiry promptly."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact & Enquiry" }]}
       />
 
       {/* Enquiry Section */}

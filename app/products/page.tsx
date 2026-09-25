@@ -19,7 +19,6 @@ export default function ProductsPage() {
       <PageHero
         title="Solid Oral Formulations"
         description="Focused exclusively on Tablets and Capsules. Explore our coating technologies, encapsulation capabilities, and packaging solutions."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Products & Formulations" }]}
       />
 
       {/* Interactive Dosage Explorer Section */}

@@ -26,7 +26,6 @@ export default function AboutPage() {
       <PageHero
         title="About Renumed Pharmaceutical Labs"
         description="A pharmaceutical manufacturing organisation focused on disciplined processes, documented operations, and responsive business support."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us" }]}
       />
 
       {/* Company Overview */}

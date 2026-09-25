@@ -33,19 +33,6 @@ export default function FacilitiesPage() {
         <div className="grid-pattern absolute inset-0 opacity-70" aria-hidden="true" />
 
         <div className="container-shell relative">
-          <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center gap-2 text-xs font-semibold text-slate-500">
-              <li>
-                <Link href="/" className="transition hover:text-petrol">
-                  Home
-                </Link>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>/</span>
-                <span className="text-navy font-bold">Manufacturing Facilities</span>
-              </li>
-            </ol>
-          </nav>
 
           <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
             <div>

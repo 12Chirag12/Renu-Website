@@ -37,7 +37,6 @@ export default function QualityPage() {
       <PageHero
         title="Quality & Compliance"
         description="Quality is a system of connected decisions. Our approach is built on inspection, documentation, and structured process controls."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Quality & Compliance" }]}
       />
 
       {/* Quality Approach */}

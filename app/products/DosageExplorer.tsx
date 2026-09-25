@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Icon } from "./Icon";
+import { Icon, type IconName } from "@/components/ui/Icon";
 
 type DosageDetail = {
   id: "tablets" | "capsules";
@@ -11,7 +11,7 @@ type DosageDetail = {
   badge: string;
   headline: string;
   summary: string;
-  formTypes: { title: string; desc: string; icon: string }[];
+  formTypes: { title: string; desc: string; icon: IconName }[];
   technicalSpecs: { label: string; value: string }[];
   packagingOptions: string[];
   sampleApplications: string[];
@@ -25,7 +25,7 @@ const dosageData: Record<"tablets" | "capsules", DosageDetail> = {
     badge: "Solid Oral Formulation",
     headline: "Precision Compression & Coating Capabilities",
     summary:
-      "Our tablet manufacturing infrastructure supports high-speed compression, advanced aqueous and organic coating, and modified-release formulation profiles with stringent weight uniformity.",
+      "Our tablet manufacturing infrastructure supports high-speed rotary compression, advanced aqueous and organic film coating, and modified-release formulation profiles with stringent weight uniformity.",
     formTypes: [
       {
         title: "Film-Coated Tablets",
@@ -142,9 +142,46 @@ const dosageData: Record<"tablets" | "capsules", DosageDetail> = {
   },
 };
 
+/* ── Smooth Increment Counter Hook ──────────────────── */
+function useSmoothCounter(target: number, duration: number = 2200, triggerKey: string) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    setValue(0);
+    let startTimestamp: number | null = null;
+    let animationFrameId: number;
+
+    const easeOutCubic = (x: number) => 1 - Math.pow(1 - x, 3);
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const eased = easeOutCubic(progress);
+
+      const current = Math.round(eased * target);
+      setValue(current);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
+      } else {
+        setValue(target);
+      }
+    };
+
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [target, duration, triggerKey]);
+
+  return value;
+}
+
 export function DosageExplorer() {
   const [activeTab, setActiveTab] = useState<"tablets" | "capsules">("tablets");
   const activeData = dosageData[activeTab];
+
+  // Simple number counter towards 453454234 for tablets
+  const tabletCount = useSmoothCounter(453454234, 2200, activeTab);
 
   return (
     <div className="relative">
@@ -152,6 +189,7 @@ export function DosageExplorer() {
       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <div className="inline-flex rounded-2xl bg-white p-1.5 shadow-md shadow-slate-200/60 border border-slate-200">
           <button
+            type="button"
             onClick={() => setActiveTab("tablets")}
             className={`inline-flex items-center gap-3 rounded-xl px-6 py-3 text-sm font-bold transition-all duration-300 ${
               activeTab === "tablets"
@@ -170,6 +208,7 @@ export function DosageExplorer() {
           </button>
 
           <button
+            type="button"
             onClick={() => setActiveTab("capsules")}
             className={`inline-flex items-center gap-3 rounded-xl px-6 py-3 text-sm font-bold transition-all duration-300 ${
               activeTab === "capsules"
@@ -189,7 +228,7 @@ export function DosageExplorer() {
         </div>
       </div>
 
-      {/* Dynamic Content Panel with Keyframe Fade/Slide */}
+      {/* Dynamic Content Panel */}
       <div
         key={activeTab}
         className="mt-10 animate-rise rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-10 lg:p-12"
@@ -222,8 +261,23 @@ export function DosageExplorer() {
           </div>
         </div>
 
+        {/* Simple Tablet Capacity Counter (Numbers counting towards 453454234) */}
+        {activeTab === "tablets" && (
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50/70 p-6 sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              Monthly Tablet Capacity
+            </p>
+            <div className="mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy tabular-nums font-mono tracking-tight">
+              {tabletCount.toLocaleString("en-US")}
+            </div>
+            <p className="mt-1.5 text-xs text-slate-500">
+              Tablets produced per month (Target: 453,454,234)
+            </p>
+          </div>
+        )}
+
         {/* Formulation Subtypes Grid */}
-        <div className="mt-10">
+        <div className="mt-12">
           <div className="flex items-center justify-between">
             <h4 className="text-xs font-bold uppercase tracking-[.14em] text-petrol">
               Supported {activeData.name} Types & Formats
@@ -239,7 +293,7 @@ export function DosageExplorer() {
               >
                 <div className="flex items-center justify-between">
                   <span className="grid h-10 w-10 place-items-center rounded-xl bg-white text-petrol shadow-sm border border-slate-100 transition-colors group-hover:bg-cyan/10 group-hover:text-petrol">
-                    <Icon name={type.icon as any} className="h-4.5 w-4.5" />
+                    <Icon name={type.icon} className="h-5 w-5" />
                   </span>
                   <span className="text-xs font-semibold text-slate-300">
                     {String(idx + 1).padStart(2, "0")}
@@ -318,3 +372,5 @@ export function DosageExplorer() {
     </div>
   );
 }
+
+export default DosageExplorer;

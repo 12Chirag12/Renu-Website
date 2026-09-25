@@ -4,8 +4,8 @@ import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { CTABanner } from "@/components/ui/CTABanner";
-import { DosageExplorer } from "@/components/ui/DosageExplorer";
 import { ProductCatalogue } from "./ProductCatalogue";
+import { DosageExplorer } from "./DosageExplorer";
 
 export const metadata: Metadata = {
   title: "Products & Formulations — Tablets & Capsules",
@@ -60,6 +60,10 @@ export default function ProductsPage() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2.5">
+                  <span className="mt-1 text-cyan font-bold">•</span>
+                  <span><strong>45 Cr+ Tablets / Month:</strong> High-speed rotary compression output with automated weight verification.</span>
+                </li>
                 <li className="flex items-start gap-2.5">
                   <span className="mt-1 text-cyan font-bold">•</span>
                   <span><strong>Film & Enteric Polymer Coating:</strong> Complete moisture, light, and acid protection.</span>

@@ -7,6 +7,8 @@ export function CTABanner({
   body = "Tell us about your product, manufacturing, packaging, or partnership requirement.",
   buttonText = "Enquire Now",
   buttonHref = "/contact",
+  secondaryButtonText = "Our Capabilities",
+  secondaryButtonHref = "/contract-manufacturing",
   variant = "petrol",
 }: {
   kicker?: string;
@@ -14,6 +16,8 @@ export function CTABanner({
   body?: string;
   buttonText?: string;
   buttonHref?: string;
+  secondaryButtonText?: string;
+  secondaryButtonHref?: string;
   variant?: "petrol" | "navy";
 }) {
   const bg = variant === "navy"
@@ -41,10 +45,10 @@ export function CTABanner({
             {buttonText} <Icon name="arrow" className="h-4 w-4" />
           </Link>
           <Link
-            href="/contract-manufacturing"
+            href={secondaryButtonHref}
             className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/5 backdrop-blur-sm px-7 py-4 text-sm font-bold text-white transition hover:border-white/50 hover:bg-white/15"
           >
-            Our Capabilities
+            {secondaryButtonText}
           </Link>
         </div>
       </div>

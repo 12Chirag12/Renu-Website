@@ -6,7 +6,9 @@ import { ProcessTimeline } from "@/components/ui/ProcessTimeline";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { InteractiveMetrics } from "@/components/ui/InteractiveMetrics";
+import { ProductionCapacity } from "@/components/ui/ProductionCapacity";
 import type { IconName } from "@/components/ui/Icon";
+
 
 /* ── Hero ───────────────────────────────────────────── */
 function Hero() {
@@ -25,7 +27,7 @@ function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan" />
             </span>
-            Tablets & Capsules Contract Manufacturing
+            Delivering Excellence in Pharmaceutical Manufacturing Since 1985
           </div>
 
           <h1 className="display-face mt-7 max-w-3xl text-[clamp(2.8rem,5.5vw,5.5rem)] font-bold leading-[.94] text-navy">
@@ -37,9 +39,15 @@ function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
-            Precision solid oral dosage manufacturing. Specialized in{" "}
-            <strong className="text-navy font-bold">Tablets</strong> and{" "}
-            <strong className="text-navy font-bold">Capsules</strong> through disciplined processes, full batch traceability, and dependable client support.
+            Established in 1985,  {" "}
+            <strong className="text-navy font-bold">Renumed Pharmaceutical </strong> is a trusted
+            <strong className="text-navy font-bold"> Contract Manufacturing Organisation (CMO)</strong> committed to delivering high-quality pharmaceutical products with 
+            <strong className="text-navy font-bold"> consistency, efficiency </strong> and 
+            <strong className="text-navy font-bold"> reliability</strong>. With decades of industry experience, we combine robust manufacturing capabilities, stringent quality standards, and a customer-centric approach to help our partners bring trusted healthcare solutions to market.
+
+            </p>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
+            <strong className="text-navy font-bold"> Quality you can trust. Manufacturing you can rely on.</strong>
           </p>
 
           <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
@@ -294,6 +302,11 @@ function DosageSpotlight() {
               </Link>
             </div>
           </div>
+        </div>
+
+        {/* ── Compact Horizontal Production Capacity Bar ── */}
+        <div className="mt-8 sm:mt-10">
+          <ProductionCapacity />
         </div>
       </div>
     </section>

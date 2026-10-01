@@ -17,6 +17,21 @@ export const capabilityPlaceholders = [
   { name: "Capsules", code: "CP", note: "Solid oral dosage form — hard gelatin & vegetarian capsule manufacturing" },
 ] as const;
 
+export const productionCapacity = {
+  annual: {
+    tablets: "1500+",
+    capsules: "960+",
+    total: "2460+",
+    unit: "million / annum",
+  },
+  monthly: {
+    tablets: "125+",
+    capsules: "80+",
+    total: "205+",
+    unit: "million / month",
+  },
+} as const;
+
 export const servicePlaceholders = [
   "Contract manufacturing",
   "Third-party manufacturing",
@@ -25,3 +40,4 @@ export const servicePlaceholders = [
   "Documentation support",
   "Business partnership enquiries",
 ] as const;
+

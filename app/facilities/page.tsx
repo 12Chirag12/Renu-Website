@@ -6,7 +6,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { MachineryExplorer } from "@/components/facilities/MachineryExplorer";
+import { ProductionCapacity } from "@/components/ui/ProductionCapacity";
 import { totalMachineryCount } from "@/data/machinery";
+
 
 export const metadata: Metadata = {
   title: "Manufacturing Facilities & Machinery — Renumed Pharma",
@@ -113,8 +115,15 @@ export default function FacilitiesPage() {
         </div>
       </section>
 
+      {/* ── Plant Production Capacity (Million / Annum) ──────── */}
+      <section className="bg-slate-50/50 py-6 sm:py-8 border-b border-slate-100">
+        <div className="container-shell max-w-4xl">
+          <ProductionCapacity />
+        </div>
+      </section>
+
       {/* ── 2 & 3. Facilities Overview & Machinery by Section ──── */}
-      <section className="bg-white py-20 sm:py-28 border-y border-slate-100">
+      <section className="bg-mist/30 py-20 sm:py-28 border-b border-slate-100">
         <div className="container-shell">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <SectionHeading
@@ -171,15 +180,17 @@ export default function FacilitiesPage() {
       {/* ── Equipment Verification Status Notice ────────────── */}
       <section className="bg-white py-14 border-t border-slate-100">
         <div className="container-shell">
-          <div className="rounded-2xl border border-amber-200 bg-amber-50/70 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
+          <div className="rounded-2xl border border-cyan/20 bg-mist/60 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
             <div>
               <p className="font-bold text-navy">Equipment specifications and capacity details</p>
               <p className="mt-1 text-xs leading-5 text-slate-600 sm:text-sm">
-                Make, model numbers, and exact batch capacity ratings are omitted pending verified documentation. Equipment names match the approved plant installation register.
+                Plant capacity is verified at 1,500+ million tablets and 960+ million capsules per annum across 9 operational suites. Equipment names match the approved plant installation register.
               </p>
             </div>
             <div className="mt-4 shrink-0 sm:mt-0">
-              <PlaceholderTag />
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan/15 px-3 py-1 text-xs font-bold text-petrol">
+                <Icon name="check" className="h-3.5 w-3.5" /> Verified Capacity
+              </span>
             </div>
           </div>
         </div>

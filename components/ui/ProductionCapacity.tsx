@@ -101,7 +101,7 @@ export function ProductionCapacity({ className = "" }: ProductionCapacityProps) 
           {/* Tablets */}
           <div className="flex-1">
             <p className="display-face text-2xl font-extrabold tracking-tight text-navy tabular-nums font-mono sm:text-3xl lg:text-4xl transition-all duration-300">
-              {tabletCount.toLocaleString("en-US")}{isAnnual ? "+" : "M+"}
+              {tabletCount}+
             </p>
             <p className="mt-0.5 text-xs font-bold text-slate-700 sm:text-sm lg:text-base">
               Tablets
@@ -114,7 +114,7 @@ export function ProductionCapacity({ className = "" }: ProductionCapacityProps) 
           {/* Capsules */}
           <div className="flex-1">
             <p className="display-face text-2xl font-extrabold tracking-tight text-navy tabular-nums font-mono sm:text-3xl lg:text-4xl transition-all duration-300">
-              {capsuleCount.toLocaleString("en-US")}{isAnnual ? "+" : "M+"}
+              {capsuleCount}+
             </p>
             <p className="mt-0.5 text-xs font-bold text-slate-700 sm:text-sm lg:text-base">
               Capsules
@@ -127,7 +127,7 @@ export function ProductionCapacity({ className = "" }: ProductionCapacityProps) 
           {/* Combined Solid Orals */}
           <div className="flex-1">
             <p className="display-face text-2xl font-extrabold tracking-tight text-petrol tabular-nums font-mono sm:text-3xl lg:text-4xl transition-all duration-300">
-              {totalCount.toLocaleString("en-US")}{isAnnual ? "+" : "M+"}
+              {totalCount}+
             </p>
             <p className="mt-0.5 text-xs font-bold text-slate-700 sm:text-sm lg:text-base">
               Total Solid Orals

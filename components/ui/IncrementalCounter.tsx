@@ -17,79 +17,102 @@ export function IncrementalCounter({
   className = "",
   triggerKey,
 }: IncrementalCounterProps) {
-  const [value, setValue] = useState(0);
-  const [hasEnteredView, setHasEnteredView] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  // Start with 0 so the user sees it increment upwards to the target number
+  const [count, setCount] = useState(0);
   const elementRef = useRef<HTMLSpanElement>(null);
+  const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    let cancelCurrentAnimation: (() => void) | null = null;
 
-    if (typeof IntersectionObserver === "undefined") {
-      setHasEnteredView(true);
-      return;
-    }
+    const startAnimation = () => {
+      if (hasAnimatedRef.current && triggerKey === undefined) return;
+      hasAnimatedRef.current = true;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          setHasEnteredView(true);
+      setCount(0);
+      let startTime: number | null = null;
+      let frameId: number;
+
+      // Ease out cubic: fast start, smooth and natural deceleration to final number
+      const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+      const updateCounter = (currentTime: number) => {
+        if (!startTime) startTime = currentTime;
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const currentVal = Math.round(easeOutCubic(progress) * target);
+
+        setCount(currentVal);
+
+        if (progress < 1) {
+          frameId = requestAnimationFrame(updateCounter);
+        } else {
+          setCount(target);
         }
-      },
-      { threshold: 0.15 }
-    );
+      };
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!hasEnteredView) return;
-
-    setValue(0);
-    let startTimestamp: number | null = null;
-    let animationFrameId: number;
-
-    const easeOutCubic = (x: number) => 1 - Math.pow(1 - x, 3);
-
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const eased = easeOutCubic(progress);
-
-      const current = Math.round(eased * target);
-      setValue(current);
-
-      if (progress < 1) {
-        animationFrameId = requestAnimationFrame(step);
-      } else {
-        setValue(target);
-      }
+      frameId = requestAnimationFrame(updateCounter);
+      cancelCurrentAnimation = () => cancelAnimationFrame(frameId);
     };
 
-    animationFrameId = requestAnimationFrame(step);
+    // If triggerKey changes (e.g. switching tabs), allow re-animating
+    if (triggerKey !== undefined) {
+      hasAnimatedRef.current = false;
+    }
 
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [target, duration, hasEnteredView, triggerKey]);
+    let observer: IntersectionObserver | null = null;
+    let fallbackTimer: NodeJS.Timeout | null = null;
 
-  // SSR fallback renders target for SEO
-  if (!isMounted) {
-    return (
-      <span className={className}>
-        {target.toLocaleString("en-US")}
-        {suffix}
-      </span>
-    );
-  }
+    if (typeof IntersectionObserver !== "undefined" && elementRef.current) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          if (entry && entry.isIntersecting) {
+            startAnimation();
+            if (observer) {
+              observer.disconnect();
+              observer = null;
+            }
+          }
+        },
+        { threshold: 0, rootMargin: "40px" }
+      );
+      observer.observe(elementRef.current);
+
+      // Check if already in viewport
+      const rect = elementRef.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        startAnimation();
+        if (observer) {
+          observer.disconnect();
+          observer = null;
+        }
+      }
+    } else {
+      startAnimation();
+    }
+
+    // Safety fallback: if not triggered within 500ms, start animation regardless so it never stays 0
+    fallbackTimer = setTimeout(() => {
+      if (!hasAnimatedRef.current) {
+        startAnimation();
+        if (observer) {
+          observer.disconnect();
+          observer = null;
+        }
+      }
+    }, 500);
+
+    return () => {
+      if (cancelCurrentAnimation) cancelCurrentAnimation();
+      if (observer) observer.disconnect();
+      if (fallbackTimer) clearTimeout(fallbackTimer);
+    };
+  }, [target, duration, triggerKey]);
 
   return (
-    <span ref={elementRef} className={className}>
-      {(hasEnteredView ? value : 0).toLocaleString("en-US")}
-      {suffix}
+    <span ref={elementRef} className={`inline-block ${className}`}>
+      {count.toLocaleString("en-US")}{suffix}
     </span>
   );
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { CTABanner } from "@/components/ui/CTABanner";
@@ -15,13 +14,8 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <PageHero
-        title="Solid Oral Formulations"
-        description="Focused exclusively on Tablets and Capsules. Explore our coating technologies, encapsulation capabilities, and packaging solutions."
-      />
-
       {/* Interactive Dosage Explorer Section */}
-      <section className="bg-gradient-to-b from-mist via-white to-mist py-24 sm:py-32">
+      <section className="bg-gradient-to-b from-mist via-white to-mist py-16 sm:py-24">
         <div className="container-shell">
           <SectionHeading
             kicker="Primary Dosage Forms"
@@ -60,7 +54,7 @@ export default function ProductsPage() {
               <ul className="mt-6 space-y-3 text-sm text-slate-600">
                 <li className="flex items-start gap-2.5">
                   <span className="mt-1 text-cyan font-bold">•</span>
-                  <span><strong>45 Cr+ Tablets / Month:</strong> High-speed rotary compression output with automated weight verification.</span>
+                  <span><strong>1,500+ Million Tablets / Annum:</strong> High-speed rotary compression output with automated weight verification.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="mt-1 text-cyan font-bold">•</span>
@@ -97,6 +91,10 @@ export default function ProductsPage() {
                 </div>
               </div>
               <ul className="mt-6 space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2.5">
+                  <span className="mt-1 text-petrol font-bold">•</span>
+                  <span><strong>960+ Million Capsules / Annum:</strong> Precision automatic encapsulation for powder blends, micro-pellets, and granules.</span>
+                </li>
                 <li className="flex items-start gap-2.5">
                   <span className="mt-1 text-petrol font-bold">•</span>
                   <span><strong>HPMC & Gelatin Compatibility:</strong> Vegetarian and standard shells across all standard sizes (00 to 4).</span>

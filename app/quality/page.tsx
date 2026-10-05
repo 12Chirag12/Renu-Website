@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { CTABanner } from "@/components/ui/CTABanner";
@@ -34,13 +33,8 @@ const docPractices = [
 export default function QualityPage() {
   return (
     <>
-      <PageHero
-        title="Quality & Compliance"
-        description="Quality is a system of connected decisions. Our approach is built on inspection, documentation, and structured process controls."
-      />
-
       {/* Quality Approach */}
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-16 sm:py-24">
         <div className="container-shell grid gap-14 lg:grid-cols-[.72fr_1.28fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionHeading

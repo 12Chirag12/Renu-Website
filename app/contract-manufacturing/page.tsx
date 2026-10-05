@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { ProcessTimeline } from "@/components/ui/ProcessTimeline";
@@ -46,13 +45,8 @@ const suitableFor = [
 export default function ContractManufacturingPage() {
   return (
     <>
-      <PageHero
-        title="Pharmaceutical Contract Manufacturing"
-        description="Reliable, quality-focused manufacturing partnerships designed around your product requirements and business objectives."
-      />
-
       {/* Introduction */}
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-16 sm:py-24">
         <div className="container-shell grid gap-16 lg:grid-cols-[1fr_1fr]">
           <div>
             <SectionHeading

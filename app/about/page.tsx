@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
@@ -23,13 +22,8 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        title="About Renumed Pharmaceutical Labs"
-        description="A pharmaceutical manufacturing organisation focused on disciplined processes, documented operations, and responsive business support."
-      />
-
       {/* Company Overview */}
-      <section className="bg-white py-24 sm:py-32">
+      <section className="bg-white py-16 sm:py-24">
         <div className="container-shell grid gap-16 lg:grid-cols-[1.1fr_.9fr]">
           <div>
             <SectionHeading
@@ -96,9 +90,8 @@ export default function AboutPage() {
           ].map(([title, text], index) => (
             <article
               key={title}
-              className={`rounded-3xl p-8 ${
-                index === 0 ? "bg-navy text-white" : "border border-slate-200 bg-white text-navy"
-              }`}
+              className={`rounded-3xl p-8 ${index === 0 ? "bg-navy text-white" : "border border-slate-200 bg-white text-navy"
+                }`}
             >
               <span className={`text-xs font-bold uppercase tracking-[.15em] ${index === 0 ? "text-cyan" : "text-petrol"}`}>
                 {String(index + 1).padStart(2, "0")}

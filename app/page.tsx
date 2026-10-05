@@ -6,7 +6,7 @@ import { ProcessTimeline } from "@/components/ui/ProcessTimeline";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { InteractiveMetrics } from "@/components/ui/InteractiveMetrics";
-import { ProductionCapacity } from "@/components/ui/ProductionCapacity";
+import { IncrementalCounter } from "@/components/ui/IncrementalCounter";
 import type { IconName } from "@/components/ui/Icon";
 
 
@@ -21,14 +21,51 @@ function Hero() {
 
       <div className="container-shell relative grid min-h-[700px] items-center gap-12 py-16 lg:grid-cols-[.94fr_1.06fr] lg:py-24">
         <div className="relative z-10 animate-rise">
-          {/* Animated interactive badge */}
-          <div className="inline-flex items-center gap-2.5 rounded-full border border-petrol/20 bg-white/95 px-3.5 py-1.5 text-[.72rem] font-bold uppercase tracking-[.15em] text-petrol shadow-md shadow-petrol/5 backdrop-blur-md transition-transform hover:scale-105">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan" />
+          {/* Premium Hero Trust Badge */}
+          <Link
+            href="/about"
+            className="group relative inline-flex items-center gap-2 sm:gap-3 rounded-full p-[1px] text-xs transition-all duration-300 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-2"
+            aria-label="Learn about Renumed Pharmaceutical's 40-year manufacturing heritage since 1985"
+          >
+            {/* Ambient diffuse colored glow */}
+            <span
+              className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-cyan/40 via-petrol/30 to-navy/30 opacity-40 blur-md transition duration-500 group-hover:opacity-80 group-hover:blur-lg"
+              aria-hidden="true"
+            />
+
+            {/* Glass pill container with dual-tone gradient border & depth */}
+            <span className="relative flex items-center gap-2 sm:gap-2.5 rounded-full border border-petrol/25 bg-white/90 py-1.5 pl-1.5 pr-3 sm:pr-4 shadow-[0_4px_20px_-4px_rgba(8,107,120,0.18)] backdrop-blur-xl transition-all duration-300 group-hover:border-petrol/40 group-hover:bg-white group-hover:shadow-[0_8px_28px_-6px_rgba(25,182,207,0.28)]">
+              
+              {/* High-contrast brand heritage tag */}
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-navy via-navy-light to-petrol px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wider text-white shadow-sm ring-1 ring-white/20">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-light opacity-80" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-light shadow-[0_0_8px_#7fe4ed]" />
+                </span>
+                <span>EST. 1985</span>
+              </span>
+
+              {/* Primary value proposition with responsive typographic hierarchy */}
+              <span className="text-[0.74rem] sm:text-[0.78rem] font-semibold text-slate-700 tracking-normal">
+                <span className="sm:hidden">Excellence in Pharma Manufacturing</span>
+                <span className="hidden sm:inline">Delivering Excellence in Pharmaceutical Manufacturing</span>
+                <span className="hidden md:inline font-bold text-petrol"> · 40+ Years</span>
+              </span>
+
+              {/* Interactive micro-indicator */}
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-petrol/10 text-petrol transition-all duration-300 group-hover:bg-petrol group-hover:text-white group-hover:translate-x-0.5">
+                <Icon name="arrow" className="h-2.5 w-2.5" />
+              </span>
+
+              {/* High-end ambient shimmer reflection */}
+              <span
+                className="pointer-events-none absolute inset-0 overflow-hidden rounded-full"
+                aria-hidden="true"
+              >
+                <span className="animate-badge-shimmer absolute inset-y-0 w-24 bg-gradient-to-r from-transparent via-white/70 to-transparent opacity-60" />
+              </span>
             </span>
-            Delivering Excellence in Pharmaceutical Manufacturing Since 1985
-          </div>
+          </Link>
 
           <h1 className="display-face mt-7 max-w-3xl text-[clamp(2.8rem,5.5vw,5.5rem)] font-bold leading-[.94] text-navy">
             <span className="block">Renumed</span>
@@ -209,15 +246,19 @@ function DosageSpotlight() {
           </Link>
         </div>
 
-        {/* 2-Column Spotlight Cards */}
+        {/* 2-Column Spotlight Cards with Integrated Annual Capacity */}
         <div className="mt-14 grid gap-8 lg:grid-cols-2">
           {/* Tablets Card */}
-          <div className="reveal-card group relative rounded-3xl border border-slate-200/90 bg-white p-8 shadow-lg shadow-slate-200/50 sm:p-10">
+          <div className="reveal-card group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-8 shadow-lg shadow-slate-200/50 transition-all duration-300 hover:border-cyan/40 hover:shadow-2xl sm:p-10">
+            {/* Top Accent Gradient Line */}
+            <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-navy via-cyan to-navy" />
+
             <div className="flex items-start justify-between">
               <span className="grid h-16 w-16 place-items-center rounded-2xl bg-navy text-base font-extrabold tracking-widest text-cyan shadow-md shadow-navy/20 transition-transform group-hover:scale-110">
                 TB
               </span>
-              <span className="rounded-full bg-cyan/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-petrol">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-petrol">
+                <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
                 Solid Oral Dosage
               </span>
             </div>
@@ -228,6 +269,46 @@ function DosageSpotlight() {
             <p className="mt-3 text-sm leading-7 text-slate-600">
               High-speed rotary compression with advanced aqueous and organic film coating, enteric protection, and controlled extended-release matrices.
             </p>
+
+            {/* ── Integrated Annual Capacity Highlight ── */}
+            <div className="mt-6 rounded-2xl border border-cyan/25 bg-gradient-to-br from-mist/95 via-white to-cyan/10 p-5 shadow-sm transition-all duration-300 group-hover:border-cyan/40 group-hover:shadow-md">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-80" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan shadow-[0_0_8px_#19b6cf]" />
+                  </span>
+                  <span className="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                    Annual Production Capacity
+                  </span>
+                </div>
+                <span className="rounded-full bg-cyan/15 px-2.5 py-0.5 text-[0.65rem] font-extrabold uppercase tracking-wider text-petrol border border-cyan/20">
+                  Verified Scale
+                </span>
+              </div>
+
+              <div className="mt-3 flex items-baseline gap-2.5">
+                <span className="display-face text-4xl sm:text-5xl font-extrabold tracking-tight text-navy tabular-nums font-mono">
+                  <IncrementalCounter target={1500} duration={2000} suffix="+" />
+                </span>
+                <span className="text-sm sm:text-base font-bold text-petrol">
+                  Million Tablets <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">/ annum</span>
+                </span>
+              </div>
+              <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                Multi-station high-speed rotary compression supporting multi-million commercial runs.
+              </p>
+
+              {/* Micro Capability Chips */}
+              <div className="mt-3.5 flex flex-wrap gap-1.5 pt-3 border-t border-slate-200/60">
+                {["Rotary Punching", "Film & Enteric Coating", "Alu-Alu Blistering"].map((chip) => (
+                  <span key={chip} className="inline-flex items-center gap-1 rounded-md bg-white/90 px-2 py-0.5 text-[0.7rem] font-semibold text-slate-600 border border-slate-200/80 shadow-2xs">
+                    <span className="h-1 w-1 rounded-full bg-cyan" />
+                    {chip}
+                  </span>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-6 space-y-2.5 border-t border-slate-100 pt-5">
               {[
@@ -247,10 +328,10 @@ function DosageSpotlight() {
             </div>
 
             <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-400">Tooling: 5mm to 22mm</span>
+              <span className="text-xs font-semibold text-slate-400">Tooling Range: 5mm to 22mm</span>
               <Link
                 href="/products"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-petrol transition group-hover:translate-x-1"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-petrol transition group-hover:translate-x-1 group-hover:text-navy"
               >
                 View Tablet Specs <Icon name="arrow" className="h-3.5 w-3.5" />
               </Link>
@@ -258,12 +339,16 @@ function DosageSpotlight() {
           </div>
 
           {/* Capsules Card */}
-          <div className="reveal-card group relative rounded-3xl border border-slate-200/90 bg-white p-8 shadow-lg shadow-slate-200/50 sm:p-10">
+          <div className="reveal-card group relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-8 shadow-lg shadow-slate-200/50 transition-all duration-300 hover:border-petrol/40 hover:shadow-2xl sm:p-10">
+            {/* Top Accent Gradient Line */}
+            <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-petrol via-cyan to-petrol" />
+
             <div className="flex items-start justify-between">
               <span className="grid h-16 w-16 place-items-center rounded-2xl bg-petrol text-base font-extrabold tracking-widest text-white shadow-md shadow-petrol/20 transition-transform group-hover:scale-110">
                 CP
               </span>
-              <span className="rounded-full bg-petrol/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-petrol/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy">
+                <span className="h-1.5 w-1.5 rounded-full bg-petrol" />
                 Encapsulation
               </span>
             </div>
@@ -274,6 +359,46 @@ function DosageSpotlight() {
             <p className="mt-3 text-sm leading-7 text-slate-600">
               High-precision automatic encapsulation for powders, granules, controlled-release pellets, and combination fills with weight control.
             </p>
+
+            {/* ── Integrated Annual Capacity Highlight ── */}
+            <div className="mt-6 rounded-2xl border border-petrol/25 bg-gradient-to-br from-mist/90 via-white to-petrol/10 p-5 shadow-sm transition-all duration-300 group-hover:border-petrol/40 group-hover:shadow-md">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-petrol opacity-80" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-petrol shadow-[0_0_8px_#086b78]" />
+                  </span>
+                  <span className="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                    Annual Production Capacity
+                  </span>
+                </div>
+                <span className="rounded-full bg-petrol/15 px-2.5 py-0.5 text-[0.65rem] font-extrabold uppercase tracking-wider text-navy border border-petrol/20">
+                  Verified Scale
+                </span>
+              </div>
+
+              <div className="mt-3 flex items-baseline gap-2.5">
+                <span className="display-face text-4xl sm:text-5xl font-extrabold tracking-tight text-navy tabular-nums font-mono">
+                  <IncrementalCounter target={960} duration={2000} suffix="+" />
+                </span>
+                <span className="text-sm sm:text-base font-bold text-petrol">
+                  Million Capsules <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">/ annum</span>
+                </span>
+              </div>
+              <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                Automatic high-precision encapsulation suites for powder blends and micro-pellets.
+              </p>
+
+              {/* Micro Capability Chips */}
+              <div className="mt-3.5 flex flex-wrap gap-1.5 pt-3 border-t border-slate-200/60">
+                {["Sizes 00 to 4", "HPMC Vegetarian & Gelatin", "MUPS Pellets"].map((chip) => (
+                  <span key={chip} className="inline-flex items-center gap-1 rounded-md bg-white/90 px-2 py-0.5 text-[0.7rem] font-semibold text-slate-600 border border-slate-200/80 shadow-2xs">
+                    <span className="h-1 w-1 rounded-full bg-petrol" />
+                    {chip}
+                  </span>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-6 space-y-2.5 border-t border-slate-100 pt-5">
               {[
@@ -293,20 +418,15 @@ function DosageSpotlight() {
             </div>
 
             <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
-              <span className="text-xs font-semibold text-slate-400">Sizes: 00, 0, 1, 2, 3, 4</span>
+              <span className="text-xs font-semibold text-slate-400">Available Sizes: 00, 0, 1, 2, 3, 4</span>
               <Link
                 href="/products"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-petrol transition group-hover:translate-x-1"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-petrol transition group-hover:translate-x-1 group-hover:text-navy"
               >
                 View Capsule Specs <Icon name="arrow" className="h-3.5 w-3.5" />
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* ── Compact Horizontal Production Capacity Bar ── */}
-        <div className="mt-8 sm:mt-10">
-          <ProductionCapacity />
         </div>
       </div>
     </section>

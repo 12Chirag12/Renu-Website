@@ -5,7 +5,7 @@ export function Logo({ inverse = false, size = "default" }: { inverse?: boolean;
   const isLarge = size === "large";
   return (
     <Link href="/" className="group flex items-center gap-3" aria-label="Renumed Pharmaceutical Labs home">
-      <span className={`relative block shrink-0 overflow-hidden rounded-lg border ${isLarge ? "h-12 w-[3.3rem]" : "h-10 w-11"} ${inverse ? "border-white/20" : "border-navy/10"}`}>
+      <span className={`relative block shrink-0 overflow-hidden rounded-lg border ${isLarge ? "h-18 w-[3.3rem]" : "h-10 w-11"} ${inverse ? "border-white/20" : "border-navy/10"}`}>
         <Image src="/images/rpl-logo.jpg" alt="" width={63} height={57} className="h-full w-full object-cover" />
       </span>
       <span className="leading-none">

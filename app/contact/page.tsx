@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
@@ -15,13 +14,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        title="Contact & Enquiry"
-        description="Start a focused conversation about your pharmaceutical manufacturing requirement. We respond to every enquiry promptly."
-      />
-
       {/* Enquiry Section */}
-      <section className="bg-mist py-24 sm:py-32">
+      <section className="bg-mist py-16 sm:py-24">
         <div className="container-shell grid gap-14 lg:grid-cols-[.78fr_1.22fr] lg:items-start">
           <div>
             <SectionHeading

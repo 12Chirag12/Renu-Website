@@ -12,11 +12,12 @@ export function LegalPage({
   return (
     <>
       {/* Page hero */}
-      <section className="bg-navy py-12 text-white sm:py-16">
-        <div className="container-shell">
-          <span className="section-kicker on-dark">{eyebrow}</span>
-          <h1 className="display-face mt-4 text-3xl font-semibold sm:text-4xl">{title}</h1>
-          <p className="mt-3 text-sm text-white/50">Last updated: {updated}</p>
+      <section className="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-mist via-white to-mist/50 py-8 text-ink sm:py-10">
+        <div className="grid-pattern absolute inset-0 opacity-40" aria-hidden="true" />
+        <div className="container-shell relative">
+          <span className="section-kicker">{eyebrow}</span>
+          <h1 className="display-face mt-3 text-3xl font-bold text-navy sm:text-4xl">{title}</h1>
+          <p className="mt-2 text-xs font-medium text-slate-500">Last updated: {updated}</p>
         </div>
       </section>
 

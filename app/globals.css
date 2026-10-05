@@ -230,6 +230,15 @@ section[id] { scroll-margin-top: 92px; }
   animation: spin-slow 24s linear infinite;
 }
 
+@keyframes badge-shimmer {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  35%, 100% { transform: translateX(350%) skewX(-20deg); }
+}
+.animate-badge-shimmer {
+  animation: badge-shimmer 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .container-shell { width: min(100% - 28px, 1220px); }

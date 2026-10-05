@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { IncrementalCounter } from "@/components/ui/IncrementalCounter";
 
 type DosageDetail = {
   id: "tablets" | "capsules";
@@ -59,6 +60,7 @@ const dosageData: Record<"tablets" | "capsules", DosageDetail> = {
       },
     ],
     technicalSpecs: [
+      { label: "Annual Capacity", value: "1,500+ Million Tablets / annum" },
       { label: "Core Shapes", value: "Round, Oval, Oblong, Caplet, Custom shapes" },
       { label: "Identification", value: "Custom debossing, break-line scoring, logo embossing" },
       { label: "Tablet Diameters", value: "5mm to 22mm customizable tooling" },
@@ -120,6 +122,7 @@ const dosageData: Record<"tablets" | "capsules", DosageDetail> = {
       },
     ],
     technicalSpecs: [
+      { label: "Annual Capacity", value: "960+ Million Capsules / annum" },
       { label: "Available Sizes", value: "Size 00, Size 0, Size 1, Size 2, Size 3, Size 4" },
       { label: "Shell Appearance", value: "Opaque, Transparent, Two-tone color combinations" },
       { label: "Fill Formats", value: "Powder blends, Granules, Micro-pellets, Mini-tablets" },
@@ -142,46 +145,12 @@ const dosageData: Record<"tablets" | "capsules", DosageDetail> = {
   },
 };
 
-/* ── Smooth Increment Counter Hook ──────────────────── */
-function useSmoothCounter(target: number, duration: number = 2200, triggerKey: string) {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    setValue(0);
-    let startTimestamp: number | null = null;
-    let animationFrameId: number;
-
-    const easeOutCubic = (x: number) => 1 - Math.pow(1 - x, 3);
-
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const eased = easeOutCubic(progress);
-
-      const current = Math.round(eased * target);
-      setValue(current);
-
-      if (progress < 1) {
-        animationFrameId = requestAnimationFrame(step);
-      } else {
-        setValue(target);
-      }
-    };
-
-    animationFrameId = requestAnimationFrame(step);
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [target, duration, triggerKey]);
-
-  return value;
-}
-
 export function DosageExplorer() {
   const [activeTab, setActiveTab] = useState<"tablets" | "capsules">("tablets");
   const activeData = dosageData[activeTab];
 
-  // Simple number counter towards 453454234 for tablets
-  const tabletCount = useSmoothCounter(453454234, 2200, activeTab);
+  // Capacity target based on active dosage
+  const capacityTarget = activeTab === "tablets" ? 1500 : 960;
 
   return (
     <div className="relative">
@@ -261,20 +230,92 @@ export function DosageExplorer() {
           </div>
         </div>
 
-        {/* Simple Tablet Capacity Counter (Numbers counting towards 453454234) */}
-        {activeTab === "tablets" && (
-          <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50/70 p-6 sm:p-8">
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              Monthly Tablet Capacity
-            </p>
-            <div className="mt-2 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy tabular-nums font-mono tracking-tight">
-              {tabletCount.toLocaleString("en-US")}
+        {/* ── Annual Production Capacity Spotlight (Dedicated for Tablets & Capsules) ── */}
+        <div
+          className={`mt-8 rounded-2xl border p-6 sm:p-7 shadow-sm transition-all duration-300 ${
+            activeTab === "tablets"
+              ? "border-cyan/30 bg-gradient-to-br from-mist/95 via-white to-cyan/10"
+              : "border-petrol/30 bg-gradient-to-br from-mist/95 via-white to-petrol/10"
+          }`}
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-2.5">
+              <span className="relative flex h-2.5 w-2.5">
+                <span
+                  className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-80 ${
+                    activeTab === "tablets" ? "bg-cyan" : "bg-petrol"
+                  }`}
+                />
+                <span
+                  className={`relative inline-flex h-2.5 w-2.5 rounded-full ${
+                    activeTab === "tablets"
+                      ? "bg-cyan shadow-[0_0_8px_#19b6cf]"
+                      : "bg-petrol shadow-[0_0_8px_#086b78]"
+                  }`}
+                />
+              </span>
+              <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-slate-500">
+                Annual Production Capacity
+              </span>
             </div>
-            <p className="mt-1.5 text-xs text-slate-500">
-              Tablets produced per month (Target: 453,454,234)
-            </p>
+            <span
+              className={`self-start sm:self-auto rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-wider ${
+                activeTab === "tablets" ? "bg-cyan/15 text-petrol" : "bg-petrol/15 text-navy"
+              }`}
+            >
+              Verified Commercial Scale • Per Annum Only
+            </span>
           </div>
-        )}
+
+          <div className="mt-4 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
+            <div className="display-face text-4xl sm:text-5xl font-extrabold text-navy tracking-tight tabular-nums font-mono">
+              <IncrementalCounter target={capacityTarget} triggerKey={activeTab} duration={1800} suffix="+" />
+            </div>
+            <div>
+              <span className="text-base sm:text-lg font-bold text-petrol block">
+                Million {activeTab === "tablets" ? "Tablets" : "Capsules"}{" "}
+                <span className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">
+                  / annum
+                </span>
+              </span>
+              <span className="text-xs text-slate-500">
+                {activeTab === "tablets"
+                  ? "Installed multi-station rotary punching lines supporting multi-million commercial runs."
+                  : "Precision automatic encapsulation suites for powder blends, micro-pellets, and controlled fills."}
+              </span>
+            </div>
+          </div>
+
+          {/* Micro-specs capability tags */}
+          <div className="mt-5 flex flex-wrap gap-2 pt-4 border-t border-slate-200/60">
+            {(activeTab === "tablets"
+              ? [
+                  "High-Speed Rotary Compression",
+                  "Aqueous & Enteric Film Coating",
+                  "Bilayer Incompatibility Separation",
+                  "Alu-Alu & PVC/PVDC Packing",
+                ]
+              : [
+                  "Automatic Encapsulation (Sizes 00–4)",
+                  "Vegetarian HPMC & Gelatin Shells",
+                  "Multi-Unit Pellet System (MUPS)",
+                  "Tamper-Evident Banding",
+                ]
+            ).map((chip) => (
+              <span
+                key={chip}
+                className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs"
+              >
+                <span
+                  className={`h-1.5 w-1.5 rounded-full ${
+                    activeTab === "tablets" ? "bg-cyan" : "bg-petrol"
+                  }`}
+                />
+                {chip}
+              </span>
+            ))}
+          </div>
+        </div>
 
         {/* Formulation Subtypes Grid */}
         <div className="mt-12">

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ProcessTimeline } from "@/components/ui/ProcessTimeline";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { InteractiveMetrics } from "@/components/ui/InteractiveMetrics";
@@ -469,35 +468,6 @@ function WhyChooseUs() {
   );
 }
 
-/* ── Process Timeline ───────────────────────────────── */
-const processSteps = [
-  "Enquiry",
-  "Requirement Review",
-  "Development / Approval",
-  "Manufacturing",
-  "Quality Control",
-  "Packaging",
-  "Dispatch",
-];
-
-function ProcessSection() {
-  return (
-    <section className="relative overflow-hidden bg-navy py-24 text-white sm:py-32">
-      <div className="glow-orb top-0 right-0 h-96 w-96 bg-cyan/15" aria-hidden="true" />
-      <div className="container-shell relative">
-        <SectionHeading
-          kicker="Engagement process"
-          title="From enquiry to dispatch — a clear path."
-          body="Our structured manufacturing process ensures transparency, quality, and timely delivery at every stage."
-          dark
-        />
-        <div className="mt-14">
-          <ProcessTimeline steps={processSteps} dark />
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ── Quality Preview ────────────────────────────────── */
 function QualityPreview() {
@@ -553,7 +523,6 @@ export default function HomePage() {
       <DosageSpotlight />
       <ServicesOverview />
       <WhyChooseUs />
-      <ProcessSection />
       <QualityPreview />
       <CTABanner
         kicker="Ready to partner?"

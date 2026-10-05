@@ -35,7 +35,7 @@ function Hero() {
 
             {/* Glass pill container with dual-tone gradient border & depth */}
             <span className="relative flex items-center gap-2 sm:gap-2.5 rounded-full border border-petrol/25 bg-white/90 py-1.5 pl-1.5 pr-3 sm:pr-4 shadow-[0_4px_20px_-4px_rgba(8,107,120,0.18)] backdrop-blur-xl transition-all duration-300 group-hover:border-petrol/40 group-hover:bg-white group-hover:shadow-[0_8px_28px_-6px_rgba(25,182,207,0.28)]">
-              
+
               {/* High-contrast brand heritage tag */}
               <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-navy via-navy-light to-petrol px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wider text-white shadow-sm ring-1 ring-white/20">
                 <span className="relative flex h-2 w-2">
@@ -68,7 +68,7 @@ function Hero() {
           </Link>
 
           <h1 className="display-face mt-7 max-w-3xl text-[clamp(2.8rem,5.5vw,5.5rem)] font-bold leading-[.94] text-navy">
-            <span className="block">Renumed</span>
+            <span className="block">RENUMED</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-petrol via-cyan to-petrol">
               Pharmaceutical
             </span>
@@ -78,12 +78,12 @@ function Hero() {
           <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
             Established in 1985,  {" "}
             <strong className="text-navy font-bold">Renumed Pharmaceutical </strong> is a trusted
-            <strong className="text-navy font-bold"> Contract Manufacturing Organisation (CMO)</strong> committed to delivering high-quality pharmaceutical products with 
-            <strong className="text-navy font-bold"> consistency, efficiency </strong> and 
+            <strong className="text-navy font-bold"> Contract Manufacturing Organisation (CMO)</strong> committed to delivering high-quality pharmaceutical products with
+            <strong className="text-navy font-bold"> consistency, efficiency </strong> and
             <strong className="text-navy font-bold"> reliability</strong>. With decades of industry experience, we combine robust manufacturing capabilities, stringent quality standards, and a customer-centric approach to help our partners bring trusted healthcare solutions to market.
 
-            </p>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
+          </p>
+          <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
             <strong className="text-navy font-bold"> Quality you can trust. Manufacturing you can rely on.</strong>
           </p>
 

@@ -81,7 +81,7 @@ export default function ContactPage() {
                   <Icon name="pin" className="h-4 w-4" />
                 </span>
                 <div>
-                  <h3 className="text-sm font-bold text-navy">Renumed Pharmaceutical Labs</h3>
+                  <h3 className="text-sm font-bold text-navy">RENUMED Pharmaceutical Labs</h3>
                   <p className="text-[.72rem] text-slate-500">Manufacturing Facility & Works</p>
                 </div>
               </div>

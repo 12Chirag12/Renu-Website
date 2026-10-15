@@ -60,7 +60,6 @@ const HIGHLIGHTED: { name: string; d: string }[] = [
   },
 ];
 
-const UNIQUE_COUNTRIES = [...new Set(CITIES.map((c) => c.c))];
 const WORLD_VIEW: View = [0, 0, 1000, 520];
 const INITIAL_FOCUS_VIEW: View = [345.3, 199.8, 338.8, 176.2];
 const DEFAULT_HI_BOX: View = [441.6, 199.8, 146.3, 176.2];
@@ -68,7 +67,7 @@ const DEFAULT_HI_BOX: View = [441.6, 199.8, 146.3, 176.2];
 const CSS = `
 .africa-map-scope {
   --blue: #2f6bf0;
-  --blue-d: #1f4fc4;
+  --blue-d: #1639a0;
   --ink: #0f1b3d;
   --ghost: #dce6f5;
   --ghost-line: #fff;
@@ -126,33 +125,42 @@ const CSS = `
   stroke-width: 0.6;
   vector-effect: non-scaling-stroke;
   cursor: pointer;
-  transition: fill 0.2s;
+  transition: fill 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
   transform-box: fill-box;
   transform-origin: center;
-  animation: pop 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 .africa-map-scope .c:hover,
 .africa-map-scope .c.on {
   fill: #1639a0;
+  filter: drop-shadow(0 4px 10px rgba(22, 57, 160, 0.45));
 }
-.africa-map-scope .pin.on text {
-  fill: #030818;
+.africa-map-scope .pin {
+  transition: opacity 0.3s ease;
 }
 .africa-map-scope .pin circle {
-  transition: stroke 0.2s;
+  fill: #fff;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  vector-effect: non-scaling-stroke;
+  transition: stroke 0.3s ease, fill 0.3s ease;
 }
 .africa-map-scope .pin.on circle {
   stroke: #030818;
+  fill: #2f6bf0;
 }
-@keyframes pop {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+.africa-map-scope .pin text {
+  font-weight: 700;
+  fill: #4a6199;
+  transition: fill 0.3s ease, font-weight 0.3s ease;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.africa-map-scope .pin.on text {
+  fill: #030818;
+  font-weight: 800;
 }
 .africa-map-scope .arc {
   fill: none;
@@ -167,37 +175,6 @@ const CSS = `
   to {
     stroke-dashoffset: -14;
   }
-}
-.africa-map-scope .pin circle {
-  fill: #fff;
-  stroke: var(--ink);
-  stroke-width: 1.6;
-  vector-effect: non-scaling-stroke;
-}
-.africa-map-scope .pin text {
-  font-weight: 700;
-  fill: #4a6199;
-  transition: fill 0.2s;
-  paint-order: stroke;
-  stroke: #fff;
-  stroke-width: 4px;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-.africa-map-scope .tip {
-  position: absolute;
-  pointer-events: none;
-  background: var(--chip);
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(15, 27, 61, 0.2);
-  transform: translate(-50%, -130%);
-  transition: opacity 0.15s;
-  white-space: nowrap;
-  z-index: 20;
 }
 .africa-map-scope .tabs {
   position: absolute;
@@ -230,48 +207,6 @@ const CSS = `
   outline: 2px solid var(--blue-d);
   outline-offset: 2px;
 }
-.africa-map-scope .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
-.africa-map-scope .list span {
-  background: var(--chip);
-  border: 1px solid var(--dot);
-  padding: 6px 13px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--ink);
-  display: inline-flex;
-  align-items: center;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  user-select: none;
-}
-.africa-map-scope .list span:before {
-  content: "";
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--blue);
-  margin-right: 8px;
-  transition: transform 0.2s ease;
-}
-.africa-map-scope .list span:hover,
-.africa-map-scope .list span.active-pill {
-  border-color: var(--blue);
-  background: #f0f5ff;
-  color: var(--blue-d);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(47, 107, 240, 0.12);
-}
-.africa-map-scope .list span:hover:before,
-.africa-map-scope .list span.active-pill:before {
-  transform: scale(1.3);
-}
 @media (prefers-reduced-motion: reduce) {
   .africa-map-scope .c,
   .africa-map-scope .arc {
@@ -296,8 +231,29 @@ export function AfricaMap() {
   const [view, setView] = useState<View>(INITIAL_FOCUS_VIEW);
   const [tab, setTab] = useState<Tab>("focus");
   const [cardWidth, setCardWidth] = useState<number>(1000);
-  const [activeCountry, setActiveCountry] = useState<string | null>(null);
-  const [tip, setTip] = useState({ text: "", left: 0, top: 0, opacity: 0 });
+
+  // Auto-cycling highlight state
+  const [autoHighlightedCountry, setAutoHighlightedCountry] = useState<string>("Nigeria");
+  const [manualHoverCountry, setManualHoverCountry] = useState<string | null>(null);
+
+  // Active country is the manually hovered one, or the auto-cycling one
+  const activeCountry = manualHoverCountry || autoHighlightedCountry;
+
+  // Auto-iterate through countries in a loop (pauses if user is manually hovering)
+  useEffect(() => {
+    if (manualHoverCountry) return;
+
+    const countries = HIGHLIGHTED.map((h) => h.name);
+    let idx = countries.indexOf(autoHighlightedCountry);
+    if (idx === -1) idx = 0;
+
+    const interval = setInterval(() => {
+      idx = (idx + 1) % countries.length;
+      setAutoHighlightedCountry(countries[idx]);
+    }, 1750);
+
+    return () => clearInterval(interval);
+  }, [manualHoverCountry, autoHighlightedCountry]);
 
   const arcs = useMemo(
     () =>
@@ -422,21 +378,8 @@ export function AfricaMap() {
                   className={"c" + (activeCountry === p.name ? " on" : "")}
                   data-name={p.name}
                   d={p.d}
-                  onMouseMove={(e) => {
-                    if (!cardRef.current) return;
-                    const r = cardRef.current.getBoundingClientRect();
-                    setTip({
-                      text: p.name,
-                      left: e.clientX - r.left,
-                      top: e.clientY - r.top,
-                      opacity: 1,
-                    });
-                  }}
-                  onMouseEnter={() => setActiveCountry(p.name)}
-                  onMouseLeave={() => {
-                    setTip((t) => ({ ...t, opacity: 0 }));
-                    setActiveCountry(null);
-                  }}
+                  onMouseEnter={() => setManualHoverCountry(p.name)}
+                  onMouseLeave={() => setManualHoverCountry(null)}
                 />
               ))}
             </g>
@@ -474,30 +417,6 @@ export function AfricaMap() {
               </button>
             ))}
           </div>
-          <div
-            className="tip"
-            id="tip"
-            style={{
-              left: tip.left,
-              top: tip.top,
-              opacity: tip.opacity,
-              display: tip.opacity > 0 ? "block" : "none",
-            }}
-          >
-            {tip.text}
-          </div>
-        </div>
-        <div className="list" id="list">
-          {UNIQUE_COUNTRIES.map((n) => (
-            <span
-              key={n}
-              className={activeCountry === n ? "active-pill" : ""}
-              onMouseEnter={() => setActiveCountry(n)}
-              onMouseLeave={() => setActiveCountry(null)}
-            >
-              {n}
-            </span>
-          ))}
         </div>
       </div>
     </div>

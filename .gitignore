@@ -6,4 +6,5 @@ out
 .env*.local
 npm-debug.log*
 PROJECT_MAP.txt
+*.tsbuildinfo
 

@@ -69,7 +69,7 @@ function Hero() {
 
           <h1 className="display-face mt-7 max-w-3xl text-[clamp(2.8rem,5.5vw,5.5rem)] font-bold leading-[.94] text-navy">
             <span className="block">RENUMED</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-petrol via-cyan to-petrol">
+            <span className="block text-cyan">
               Pharmaceutical
             </span>
             <span className="block">Labs</span>
@@ -500,41 +500,6 @@ function DosageSpotlight() {
   );
 }
 
-/* ── Why Choose Renumed ─────────────────────────────── */
-const principles = [
-  { icon: "shield" as IconName, title: "Quality-Focused Processes", text: "A clear framework for inspection, controlled activity, review, and documented release decisions." },
-  { icon: "layers" as IconName, title: "Reliable Manufacturing", text: "A process-led approach designed around consistency, coordination, and practical production controls." },
-  { icon: "spark" as IconName, title: "Customer-Oriented Service", text: "Clear communication and business support shaped around confirmed partner requirements." },
-  { icon: "document" as IconName, title: "Documented Operations", text: "Structured records help support visibility, review, traceability, and responsible follow-through." },
-];
-
-function WhyChooseUs() {
-  return (
-    <section className="bg-white py-24 sm:py-32">
-      <div className="container-shell grid gap-16 lg:grid-cols-[.8fr_1.2fr]">
-        <SectionHeading
-          kicker="Why Renumed"
-          title="Built around process. Focused on trust."
-          body="Renumed Pharmaceutical Labs is a manufacturing organisation focused on disciplined, quality-oriented operations serving pharmaceutical business requirements."
-        />
-        <div className="grid gap-4 sm:grid-cols-2">
-          {principles.map((item, index) => (
-            <article key={item.title} className="reveal-card rounded-2xl border border-slate-200 bg-white p-6">
-              <div className="flex items-start justify-between">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-cyan/10 text-petrol">
-                  <Icon name={item.icon} />
-                </span>
-                <span className="text-xs font-semibold text-slate-300">{String(index + 1).padStart(2, "0")}</span>
-              </div>
-              <h3 className="mt-6 text-lg font-bold text-navy">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 
 /* ── Quality Preview ────────────────────────────────── */
@@ -591,7 +556,6 @@ export default function HomePage() {
       <MapSection />
       <DosageSpotlight />
       <ServicesOverview />
-      <WhyChooseUs />
       <QualityPreview />
       <CTABanner
         kicker="Ready to partner?"

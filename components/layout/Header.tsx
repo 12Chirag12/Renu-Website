@@ -51,6 +51,12 @@ const navItems: NavItem[] = [
     description: "29 verified production & packaging machines",
   },
   {
+    label: "Gallery",
+    href: "/gallery",
+    icon: "image",
+    description: "Photographs of our manufacturing plant & cleanrooms",
+  },
+  {
     label: "Contact Us",
     href: "/contact",
     icon: "pin",
@@ -115,7 +121,7 @@ export function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`group relative flex h-full items-center px-3.5 text-[.82rem] font-semibold transition-colors duration-200 xl:px-4 ${
+                  className={`group relative flex h-full items-center px-2.5 text-[.82rem] font-semibold transition-colors duration-200 xl:px-3.5 ${
                     isActive
                       ? "text-petrol font-bold"
                       : "text-slate-600 hover:text-petrol focus:text-petrol"

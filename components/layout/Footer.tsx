@@ -7,6 +7,7 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Contract Manufacturing", href: "/contract-manufacturing" },
   { label: "Products", href: "/products" },
+  { label: "Facility Gallery", href: "/gallery" },
 ];
 
 const businessLinks = [

@@ -3,7 +3,7 @@ export type IconName =
   | "shield" | "document" | "flask" | "box" | "layers"
   | "search" | "mail" | "pin" | "clock" | "phone" | "spark"
   | "factory" | "beaker" | "truck" | "users" | "chart"
-  | "globe" | "target" | "award" | "clipboard" | "settings";
+  | "globe" | "target" | "award" | "clipboard" | "settings" | "image";
 
 export function Icon({ name, className = "h-5 w-5" }: { name: IconName; className?: string }) {
   const common = {
@@ -41,6 +41,7 @@ export function Icon({ name, className = "h-5 w-5" }: { name: IconName; classNam
       {name === "award" && <><circle cx="12" cy="8" r="6" /><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" /></>}
       {name === "clipboard" && <><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><rect x="8" y="2" width="8" height="4" rx="1" /></>}
       {name === "settings" && <><circle cx="12" cy="12" r="3" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></>}
+      {name === "image" && <><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><path d="m21 15-5-5L5 21" /></>}
     </svg>
   );
 }

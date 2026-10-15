@@ -1,6 +1,9 @@
 node_modules
 .next
 out
+.env
+.env.local
 .env*.local
 npm-debug.log*
 PROJECT_MAP.txt
+

@@ -239,6 +239,135 @@ section[id] { scroll-margin-top: 92px; }
 }
 
 
+/* ── Africa Map ─────────────────────────────────────── */
+.map-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f7faff 0%, #eef5ff 55%, #e8f1ff 100%);
+  border: 1px solid #dfe9f8;
+  aspect-ratio: 1000 / 520;
+  box-shadow: 0 18px 40px -24px rgba(8, 107, 120, .35);
+}
+.map-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#c4d4ee 1.2px, transparent 1.3px);
+  background-size: 26px 26px;
+  opacity: .55;
+}
+.map-base path {
+  fill: #dce6f5;
+  stroke: #fff;
+  stroke-width: .5;
+  vector-effect: non-scaling-stroke;
+}
+.map-c {
+  filter: drop-shadow(0 2px 3px rgba(8, 107, 120, .25));
+  fill: var(--petrol);
+  stroke: #fff;
+  stroke-width: .6;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill .2s;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: map-pop .7s cubic-bezier(.2,.8,.2,1) both;
+}
+.map-c:hover, .map-c.on { fill: #083a44; }
+.map-pin.on text { fill: #030818; }
+.map-pin circle { transition: stroke .2s; }
+.map-pin.on circle { stroke: #030818; }
+@keyframes map-pop { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
+.map-arc {
+  fill: none;
+  stroke: var(--petrol);
+  stroke-opacity: .85;
+  stroke-width: 1.8;
+  stroke-dasharray: 3 4;
+  vector-effect: non-scaling-stroke;
+  animation: map-flow 2.4s linear infinite;
+}
+@keyframes map-flow { to { stroke-dashoffset: -14; } }
+.map-pin circle {
+  fill: #fff;
+  stroke: var(--ink);
+  stroke-width: 1.6;
+  vector-effect: non-scaling-stroke;
+}
+.map-pin text {
+  font-weight: 700;
+  fill: #4a6199;
+  transition: fill .2s;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.map-tip {
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(7, 26, 43, .2);
+  opacity: 0;
+  transform: translate(-50%, -130%);
+  transition: opacity .15s;
+  white-space: nowrap;
+  z-index: 10;
+}
+.map-tabs {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  gap: 4px;
+  background: #fff;
+  padding: 4px;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(7, 26, 43, .12);
+  z-index: 10;
+}
+.map-tabs button {
+  border: 0;
+  background: none;
+  font: 600 13px inherit;
+  color: #5b6784;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.map-tabs button[aria-pressed="true"] {
+  background: var(--petrol);
+  color: #fff;
+}
+.map-tabs button:focus-visible {
+  outline: 2px solid var(--petrol);
+  outline-offset: 2px;
+}
+.map-chip {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #c4d4ee;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+@media (max-width: 600px) {
+  .map-card { aspect-ratio: 4 / 3; }
+}
+
 /* ── Responsive ─────────────────────────────────────── */
 @media (max-width: 640px) {
   .container-shell { width: min(100% - 28px, 1220px); }

@@ -7,6 +7,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { InteractiveMetrics } from "@/components/ui/InteractiveMetrics";
 import { IncrementalCounter } from "@/components/ui/IncrementalCounter";
 import type { IconName } from "@/components/ui/Icon";
+import { AfricaMap } from "@/components/ui/AfricaMap";
 
 
 /* ── Hero ───────────────────────────────────────────── */
@@ -33,10 +34,10 @@ function Hero() {
             />
 
             {/* Glass pill container with dual-tone gradient border & depth */}
-            <span className="relative flex items-center gap-2 sm:gap-2.5 rounded-full border border-petrol/25 bg-white/90 py-1.5 pl-1.5 pr-3 sm:pr-4 shadow-[0_4px_20px_-4px_rgba(8,107,120,0.18)] backdrop-blur-xl transition-all duration-300 group-hover:border-petrol/40 group-hover:bg-white group-hover:shadow-[0_8px_28px_-6px_rgba(25,182,207,0.28)]">
+            <span className="relative flex items-center gap-3 sm:gap-3.5 rounded-full border border-petrol/25 bg-white/90 py-1.5 pl-2 pr-5 sm:pr-6 shadow-[0_4px_20px_-4px_rgba(8,107,120,0.18)] backdrop-blur-xl transition-all duration-300 group-hover:border-petrol/40 group-hover:bg-white group-hover:shadow-[0_8px_28px_-6px_rgba(25,182,207,0.28)]">
 
               {/* High-contrast brand heritage tag */}
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-navy via-navy-light to-petrol px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wider text-white shadow-sm ring-1 ring-white/20">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-navy via-navy-light to-petrol px-2.5 py-1 text-[0.75rem] font-bold uppercase tracking-wider text-white shadow-sm ring-1 ring-white/20">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-light opacity-80" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-light shadow-[0_0_8px_#7fe4ed]" />
@@ -45,7 +46,7 @@ function Hero() {
               </span>
 
               {/* Primary value proposition with responsive typographic hierarchy */}
-              <span className="text-[0.74rem] sm:text-[0.78rem] font-semibold text-slate-700 tracking-normal">
+              <span className="text-xs sm:text-[0.875rem] font-semibold text-slate-700 tracking-normal">
                 <span className="sm:hidden">Excellence in Pharma Manufacturing</span>
                 <span className="hidden sm:inline">Delivering Excellence in Pharmaceutical Manufacturing</span>
                 <span className="hidden md:inline font-bold text-petrol"> · 40+ Years</span>
@@ -131,15 +132,6 @@ function Hero() {
           </div>
 
           {/* Floating Pill Card 1: Top Right */}
-          <div className="animate-float absolute -top-4 -right-2 hidden rounded-2xl border border-white/80 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:flex sm:items-center sm:gap-3">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-cyan/15 text-petrol">
-              <span className="text-xs font-bold">TB</span>
-            </span>
-            <div>
-              <p className="text-xs font-bold text-navy">Tablet Compression</p>
-              <p className="text-[.7rem] text-slate-500">Film, Enteric & Sustained</p>
-            </div>
-          </div>
 
           {/* Floating Pill Card 2: Bottom Left (positioned left to keep the Indian chemist fully visible on right) */}
           <div className="animate-float-delayed absolute -bottom-6 left-5 right-5 rounded-2xl border border-white/80 bg-white/95 p-4 shadow-xl backdrop-blur-md sm:left-6 sm:right-auto sm:w-80">
@@ -183,6 +175,82 @@ function MetricsSection() {
     <section className="bg-white py-14 border-b border-slate-100">
       <div className="container-shell">
         <InteractiveMetrics />
+      </div>
+    </section>
+  );
+}
+
+/* ── Our Global Reach Map ───────────────────────────── */
+function MapSection() {
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-mist/60 to-white py-20 sm:py-28">
+      {/* Ambient background glow accents */}
+      <div className="glow-orb -top-20 -left-20 h-80 w-80 bg-cyan/15" aria-hidden="true" />
+      <div className="glow-orb bottom-0 right-0 h-96 w-96 bg-petrol/10" aria-hidden="true" />
+
+      <div className="container-shell relative">
+        <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center xl:gap-16">
+          {/* Left Column: Heading, Context & Trust Badges */}
+          <div className="flex flex-col">
+            <SectionHeading
+              kicker="Global Reach"
+              title="Delivering across the African continent."
+              body="Our pharmaceutical products reach multiple nations, supporting healthcare access from West Africa to Central Africa and beyond. We partner with regional distributors and institutional buyers to supply dependable, batch-verified solid oral formulations."
+            />
+
+            {/* Credibility highlights */}
+            <div className="mt-8 grid gap-3.5 sm:grid-cols-2">
+              <div className="group rounded-2xl border border-slate-200/90 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition duration-300 hover:border-cyan/40 hover:shadow-md">
+                <div className="flex items-start gap-3.5">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-cyan/15 text-petrol transition duration-300 group-hover:bg-petrol group-hover:text-white">
+                    <Icon name="globe" className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-bold text-navy">6 Key Markets</h4>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      Active distribution in Sierra Leone, Nigeria, Chad, Niger, Congo & Angola.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group rounded-2xl border border-slate-200/90 bg-white/90 p-4 shadow-sm backdrop-blur-sm transition duration-300 hover:border-cyan/40 hover:shadow-md">
+                <div className="flex items-start gap-3.5">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-cyan/15 text-petrol transition duration-300 group-hover:bg-petrol group-hover:text-white">
+                    <Icon name="shield" className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-bold text-navy">Export Dossiers</h4>
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      Batch manufacturing records, COA & stability documentation ready for customs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <Link
+                href="/contact"
+                className="btn-primary inline-flex items-center gap-2 rounded-xl bg-navy px-6 py-3.5 text-sm font-bold text-white shadow-md shadow-navy/15 transition hover:bg-petrol"
+              >
+                Inquire for Export Supply <Icon name="arrow" className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/quality"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/90 px-5 py-3.5 text-sm font-bold text-slate-700 shadow-sm backdrop-blur-sm transition hover:border-petrol/40 hover:text-petrol"
+              >
+                Quality Assurance <Icon name="chevron" className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: Interactive Africa & World Map */}
+          <div className="w-full">
+            <AfricaMap />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -520,6 +588,7 @@ export default function HomePage() {
     <>
       <Hero />
       <MetricsSection />
+      <MapSection />
       <DosageSpotlight />
       <ServicesOverview />
       <WhyChooseUs />

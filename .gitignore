@@ -6,5 +6,6 @@ out
 .env*.local
 npm-debug.log*
 PROJECT_MAP.txt
+CPANEL_VERCEL_SETUP_CHEATSHEET.txt
 *.tsbuildinfo
 

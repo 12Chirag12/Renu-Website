@@ -1,0 +1,83 @@
+================================================================================
+RENAMED PHARMA — cPANEL PHP WEBSITE DEPLOYMENT GUIDE
+================================================================================
+Pure PHP + HTML5 + CSS3 + Vanilla JavaScript (Zero Node.js Required)
+
+This build is completely self-contained and ready to run on any standard cPanel 
+shared hosting account running Apache and PHP 7.4, 8.0, 8.1, 8.2, or 8.3+.
+
+--------------------------------------------------------------------------------
+STEP 1: UPLOAD FILES TO cPANEL
+--------------------------------------------------------------------------------
+1. Log in to your cPanel.
+2. Under the "Files" section, click on "File Manager".
+3. Navigate into the "public_html" directory.
+   (If you are hosting on an addon domain or subdomain, open that domain's root folder).
+4. If there is a default "index.html" or "default.html", delete or rename it.
+5. Click "Upload" at the top of File Manager.
+6. Upload everything inside the "php-build" folder:
+   - index.php
+   - about.php
+   - contact.php
+   - contract-manufacturing.php
+   - products.php
+   - quality.php
+   - facilities.php
+   - gallery.php
+   - privacy.php
+   - terms.php
+   - disclaimer.php
+   - 404.php
+   - enquiry-handler.php
+   - .htaccess
+   - /assets/      (contains style.css, main.js)
+   - /images/      (contains all website photos, logos, gallery images)
+   - /includes/    (contains head.php, header.php, footer.php, africa-map.php)
+
+   * TIP: You can zip the contents of "php-build", upload the .zip to public_html,
+     and click "Extract" in cPanel File Manager.
+
+--------------------------------------------------------------------------------
+STEP 2: CHECK .HTACCESS
+--------------------------------------------------------------------------------
+- In cPanel File Manager, click "Settings" (top right gear icon).
+- Check the box "Show Hidden Files (dotfiles)" and click Save.
+- Verify that ".htaccess" is present in public_html.
+- This ensures clean URLs (e.g. yourdomain.com/about works identically to 
+  yourdomain.com/about.php) and custom 404 error routing.
+
+--------------------------------------------------------------------------------
+STEP 3: CONFIGURE ENQUIRY EMAIL RECIPIENT
+--------------------------------------------------------------------------------
+- Open "enquiry-handler.php" in File Manager code editor.
+- At line 69:
+    $to = getenv('CONTACT_TO_EMAIL') ?: 'info@renumedpharma.com';
+- Change 'info@renumedpharma.com' to whichever email inbox should receive the
+  inquiries from the contact form (e.g. your manager's email address).
+- Save changes.
+
+--------------------------------------------------------------------------------
+STEP 4: SSL (HTTPS)
+--------------------------------------------------------------------------------
+- In cPanel, find "SSL/TLS Status" or "Let's Encrypt SSL".
+- Run "AutoSSL" to issue a free SSL certificate for your domain so the site
+  loads securely over https://.
+
+================================================================================
+PAGE DIRECTORY & STRUCTURE
+================================================================================
+- Homepage:               index.php
+- About Us:               about.php
+- Contract Manufacturing: contract-manufacturing.php
+- Products Scope:         products.php
+- Quality & Compliance:   quality.php
+- Facilities & Machinery: facilities.php
+- Facility Gallery:       gallery.php
+- Contact & Inquiries:    contact.php
+- Privacy Policy:         privacy.php
+- Terms of Use:           terms.php
+- Product Disclaimer:     disclaimer.php
+- 404 Error Handler:      404.php
+- Form Backend API:       enquiry-handler.php (PHP mail with rate limiting & anti-spam)
+================================================================================
+

@@ -18,7 +18,7 @@ export function EnquiryForm({ compact = false }: { compact?: boolean }) {
     const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
     setStatus({ kind: "loading", message: "Sending your enquiry…" });
     try {
-      const response = await fetch("/api/enquiry", {
+      const response = await fetch("/enquiry-handler.php", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ ...data, consent: data.consent === "on" }),

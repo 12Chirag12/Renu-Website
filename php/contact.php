@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
   <html lang="en" data-scroll-behavior="smooth">
-  <head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/css/style.css" />
+  <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/css/style.css" />
   <script src="/assets/js/main.js" defer></script><title>Contact &amp; Enquiry | Renumed Pharmaceutical Labs</title><meta name="description" content="Contact Renumed Pharmaceutical Labs for contract manufacturing, product development, packaging, and business partnership enquiries."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -83,7 +83,7 @@
   <article class="rounded-2xl border border-slate-200 p-6 transition hover:border-petrol/25 hover:shadow-card"><span class="grid h-11 w-11 place-items-center rounded-xl bg-mist text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3h3L11 7l-2 1.5a15 15 0 0 0 6.5 6.5L17 13l4 1.5v3c0 1.9-1.6 3.5-3.5 3.5A14.5 14.5 0 0 1 3 6.5C3 4.6 4.6 3 6.5 3Z"></path></svg></span>
   <h3 class="mt-6 text-sm font-bold text-navy">Phone &amp; Email
   </h3>
-  <p class="mt-2 text-xs leading-5 text-slate-500">To be confirmed Â· To be confirmed
+  <p class="mt-2 text-xs leading-5 text-slate-500">To be confirmed &middot; To be confirmed
   </p>
   </article>
   <article class="rounded-2xl border border-slate-200 p-6 transition hover:border-petrol/25 hover:shadow-card"><span class="grid h-11 w-11 place-items-center rounded-xl bg-mist text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
@@ -140,7 +140,7 @@
   </div>
   <div class="border-t border-white/10">
   <div class="container-shell flex flex-col gap-4 py-6 text-[.68rem] text-white/40 sm:flex-row sm:items-center sm:justify-between">
-  <p>Â© 2026 Renumed Pharmaceutical Labs. All rights reserved.
+  <p>&copy; 2026 Renumed Pharmaceutical Labs. All rights reserved.
   </p>
   <div class="flex flex-wrap gap-5"><a class="transition hover:text-white" href="/privacy/">Privacy Policy</a><a class="transition hover:text-white" href="/terms/">Terms of Use</a><a class="transition hover:text-white" href="/disclaimer/">Product Disclaimer</a>
   </div>

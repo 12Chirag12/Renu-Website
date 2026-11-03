@@ -1,6 +1,14 @@
 # Renumed Pharmaceutical Labs — Apache / cPanel Configuration
 DirectoryIndex index.php index.html
 
+
+# Force UTF-8 Encoding for all documents
+AddDefaultCharset UTF-8
+DefaultLanguage en-US
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .php .css .js .xml .json
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /

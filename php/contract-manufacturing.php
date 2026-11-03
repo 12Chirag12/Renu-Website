@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
   <html lang="en" data-scroll-behavior="smooth">
-  <head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/css/style.css" />
+  <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/css/style.css" />
   <script src="/assets/js/main.js" defer></script><title>Contract Manufacturing | Renumed Pharmaceutical Labs</title><meta name="description" content="Renumed Pharmaceutical Labs provides pharmaceutical contract manufacturing, third-party production, packaging, and documentation services with a quality-focused approach."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -30,7 +30,7 @@
   <div class=" max-w-2xl"><span class="section-kicker ">Contract manufacturing</span>
   <h2 class="display-face mt-5 text-4xl font-semibold leading-[1.08] sm:text-5xl text-navy">Your product, our production expertise.
   </h2>
-  <p class="mt-5 text-base leading-7 text-slate-600">Renumed Pharmaceutical Labs provides pharmaceutical contract manufacturing services through a structured, quality-oriented approach. We support businesses looking for reliable production partnerships â€” from formulation development through to final dispatch.
+  <p class="mt-5 text-base leading-7 text-slate-600">Renumed Pharmaceutical Labs provides pharmaceutical contract manufacturing services through a structured, quality-oriented approach. We support businesses looking for reliable production partnerships &mdash; from formulation development through to final dispatch.
   </p>
   </div>
   <div class="mt-8 space-y-4 text-sm leading-7 text-slate-600">
@@ -141,32 +141,32 @@
   <div class="relative rounded-xl p-4 transition hover:-translate-y-1 border border-white/10 bg-white/[.045] hover:border-cyan/30 hover:bg-white/[.08]"><span class="text-[.65rem] font-bold text-cyan">01</span>
   <p class="mt-8 text-sm font-semibold leading-5 text-white/85">Enquiry
   </p>
-<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">â€º</span>
+<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">&rsaquo;</span>
   </div>
   <div class="relative rounded-xl p-4 transition hover:-translate-y-1 border border-white/10 bg-white/[.045] hover:border-cyan/30 hover:bg-white/[.08]"><span class="text-[.65rem] font-bold text-cyan">02</span>
   <p class="mt-8 text-sm font-semibold leading-5 text-white/85">Requirement Review
   </p>
-<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">â€º</span>
+<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">&rsaquo;</span>
   </div>
   <div class="relative rounded-xl p-4 transition hover:-translate-y-1 border border-white/10 bg-white/[.045] hover:border-cyan/30 hover:bg-white/[.08]"><span class="text-[.65rem] font-bold text-cyan">03</span>
   <p class="mt-8 text-sm font-semibold leading-5 text-white/85">Development / Approval
   </p>
-<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">â€º</span>
+<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">&rsaquo;</span>
   </div>
   <div class="relative rounded-xl p-4 transition hover:-translate-y-1 border border-white/10 bg-white/[.045] hover:border-cyan/30 hover:bg-white/[.08]"><span class="text-[.65rem] font-bold text-cyan">04</span>
   <p class="mt-8 text-sm font-semibold leading-5 text-white/85">Manufacturing
   </p>
-<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">â€º</span>
+<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">&rsaquo;</span>
   </div>
   <div class="relative rounded-xl p-4 transition hover:-translate-y-1 border border-white/10 bg-white/[.045] hover:border-cyan/30 hover:bg-white/[.08]"><span class="text-[.65rem] font-bold text-cyan">05</span>
   <p class="mt-8 text-sm font-semibold leading-5 text-white/85">Quality Control
   </p>
-<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">â€º</span>
+<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">&rsaquo;</span>
   </div>
   <div class="relative rounded-xl p-4 transition hover:-translate-y-1 border border-white/10 bg-white/[.045] hover:border-cyan/30 hover:bg-white/[.08]"><span class="text-[.65rem] font-bold text-cyan">06</span>
   <p class="mt-8 text-sm font-semibold leading-5 text-white/85">Packaging
   </p>
-<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">â€º</span>
+<span class="absolute -right-2 top-1/2 z-10 hidden h-4 w-4 place-items-center rounded-full text-xs lg:grid bg-cyan text-navy" aria-hidden="true">&rsaquo;</span>
   </div>
   <div class="relative rounded-xl p-4 transition hover:-translate-y-1 border border-white/10 bg-white/[.045] hover:border-cyan/30 hover:bg-white/[.08]"><span class="text-[.65rem] font-bold text-cyan">07</span>
   <p class="mt-8 text-sm font-semibold leading-5 text-white/85">Dispatch
@@ -184,7 +184,7 @@
   <div class=" max-w-2xl"><span class="section-kicker ">Solid Oral Capabilities</span>
   <h2 class="display-face mt-5 text-4xl font-semibold leading-[1.08] sm:text-5xl text-navy">Dedicated Tablets &amp; Capsules Infrastructure.
   </h2>
-  <p class="mt-5 text-base leading-7 text-slate-600">Our contract manufacturing operations are purpose-built for solid oral dosage forms â€” ensuring high compression speed, tight weight tolerances, and controlled dissolution.
+  <p class="mt-5 text-base leading-7 text-slate-600">Our contract manufacturing operations are purpose-built for solid oral dosage forms &mdash; ensuring high compression speed, tight weight tolerances, and controlled dissolution.
   </p>
   </div>
 <a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-petrol transition hover:text-navy" href="/products/">Inspect technical specs <svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m14 7 5 5-5 5"></path></svg></a>
@@ -196,7 +196,7 @@
   </div>
   <h3 class="mt-6 text-2xl font-bold text-navy">Tablets
   </h3>
-  <p class="mt-2 text-sm leading-6 text-slate-600">Solid oral dosage form â€” comprehensive tablet manufacturing capabilities
+  <p class="mt-2 text-sm leading-6 text-slate-600">Solid oral dosage form &mdash; comprehensive tablet manufacturing capabilities
   </p>
   </div>
   <div class="mt-6 pt-5 border-t border-slate-200/80 flex items-center justify-between"><span class="text-xs font-semibold text-slate-400">Validated Production</span><a class="inline-flex items-center gap-1.5 text-xs font-bold text-petrol transition group-hover:translate-x-1" href="/contact/?interest=Tablets%20Manufacturing">Request Quote <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m14 7 5 5-5 5"></path></svg></a>
@@ -208,7 +208,7 @@
   </div>
   <h3 class="mt-6 text-2xl font-bold text-navy">Capsules
   </h3>
-  <p class="mt-2 text-sm leading-6 text-slate-600">Solid oral dosage form â€” hard gelatin &amp; vegetarian capsule manufacturing
+  <p class="mt-2 text-sm leading-6 text-slate-600">Solid oral dosage form &mdash; hard gelatin &amp; vegetarian capsule manufacturing
   </p>
   </div>
   <div class="mt-6 pt-5 border-t border-slate-200/80 flex items-center justify-between"><span class="text-xs font-semibold text-slate-400">Validated Production</span><a class="inline-flex items-center gap-1.5 text-xs font-bold text-petrol transition group-hover:translate-x-1" href="/contact/?interest=Capsules%20Manufacturing">Request Quote <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m14 7 5 5-5 5"></path></svg></a>
@@ -337,7 +337,7 @@
   </div>
   <div class="border-t border-white/10">
   <div class="container-shell flex flex-col gap-4 py-6 text-[.68rem] text-white/40 sm:flex-row sm:items-center sm:justify-between">
-  <p>Â© 2026 Renumed Pharmaceutical Labs. All rights reserved.
+  <p>&copy; 2026 Renumed Pharmaceutical Labs. All rights reserved.
   </p>
   <div class="flex flex-wrap gap-5"><a class="transition hover:text-white" href="/privacy/">Privacy Policy</a><a class="transition hover:text-white" href="/terms/">Terms of Use</a><a class="transition hover:text-white" href="/disclaimer/">Product Disclaimer</a>
   </div>

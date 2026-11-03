@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
   <html lang="en" data-scroll-behavior="smooth">
-  <head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/gallery/pic7.jpeg"/><link rel="preload" as="image" href="/images/gallery/pic4.jpeg"/><link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="/assets/js/main.js" defer></script><title>Manufacturing &amp; Facility Gallery â€” Renumed Pharma | Renumed Pharmaceutical Labs</title><meta name="description" content="View inside Renumed Pharmaceutical Labs: high-speed rotary tablet compression, automated auto-coaters, Alu-Alu blister lines, and certified cGMP cleanrooms."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/gallery/pic7.jpeg"/><link rel="preload" as="image" href="/images/gallery/pic4.jpeg"/><link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/main.js" defer></script><title>Manufacturing &amp; Facility Gallery &mdash; Renumed Pharma | Renumed Pharmaceutical Labs</title><meta name="description" content="View inside Renumed Pharmaceutical Labs: high-speed rotary tablet compression, automated auto-coaters, Alu-Alu blister lines, and certified cGMP cleanrooms."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
   <header class="sticky top-0 z-50 relative border-b border-slate-200/80 bg-white/95 backdrop-blur-xl shadow-sm transition-all duration-200"><a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-navy focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
@@ -166,7 +166,7 @@
   </div>
   <div class="border-t border-white/10">
   <div class="container-shell flex flex-col gap-4 py-6 text-[.68rem] text-white/40 sm:flex-row sm:items-center sm:justify-between">
-  <p>Â© 2026 Renumed Pharmaceutical Labs. All rights reserved.
+  <p>&copy; 2026 Renumed Pharmaceutical Labs. All rights reserved.
   </p>
   <div class="flex flex-wrap gap-5"><a class="transition hover:text-white" href="/privacy/">Privacy Policy</a><a class="transition hover:text-white" href="/terms/">Terms of Use</a><a class="transition hover:text-white" href="/disclaimer/">Product Disclaimer</a>
   </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html lang="en" data-scroll-behavior="smooth">
-  <head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/quality-laboratory.png"/><link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="/assets/js/main.js" defer></script><title>Manufacturing Facilities &amp; Machinery â€” Renumed Pharma | Renumed Pharmaceutical Labs</title><meta name="description" content="Explore Renumed Pharma&#x27;s advanced pharmaceutical manufacturing facilities, rotary compression machinery, automated coating pans, and blister packaging infrastructure."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/quality-laboratory.png"/><link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/main.js" defer></script><title>Manufacturing Facilities &amp; Machinery &mdash; Renumed Pharma | Renumed Pharmaceutical Labs</title><meta name="description" content="Explore Renumed Pharma&#x27;s advanced pharmaceutical manufacturing facilities, rotary compression machinery, automated coating pans, and blister packaging infrastructure."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
   <header class="sticky top-0 z-50 relative border-b border-slate-200/80 bg-white/95 backdrop-blur-xl shadow-sm transition-all duration-200"><a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-navy focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
@@ -44,7 +44,7 @@
   <div>
   <p class="text-xs font-bold uppercase tracking-wider text-navy">29 Manufacturing &amp; Packaging Machines
   </p>
-  <p class="text-[.72rem] text-slate-500">Production &amp; Packing Departments Â· 9 Operational Sections
+  <p class="text-[.72rem] text-slate-500">Production &amp; Packing Departments &middot; 9 Operational Sections
   </p>
   </div>
   </div>
@@ -128,7 +128,7 @@
   </p>
   <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-slate-100"><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Coating (5)</span><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Compression (9)</span><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Granulation-I (1)</span><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Granulation-II (1)</span><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Lubrication-I (1)</span><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Lubrication-II (1)</span>
   </div>
-  <div class="mt-5 flex items-center justify-between text-xs font-bold text-petrol"><span>Filter Production Machinery</span><span class="group-hover:translate-x-1 transition-transform">â†’</span>
+  <div class="mt-5 flex items-center justify-between text-xs font-bold text-petrol"><span>Filter Production Machinery</span><span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
   </div>
   </div>
   <div class="cursor-pointer group relative overflow-hidden rounded-3xl border p-8 transition-all duration-300 border-slate-200/90 bg-white/95 hover:border-petrol/40 hover:shadow-lg">
@@ -140,7 +140,7 @@
   </p>
   <div class="mt-6 flex flex-wrap gap-2 pt-5 border-t border-slate-100"><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Blister Packaging (5)</span><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Pouch Filling (3)</span><span class="rounded-lg bg-mist px-2.5 py-1 text-xs font-medium text-slate-700 border border-slate-200/70">Strip Packaging (3)</span>
   </div>
-  <div class="mt-5 flex items-center justify-between text-xs font-bold text-petrol"><span>Filter Packing Machinery</span><span class="group-hover:translate-x-1 transition-transform">â†’</span>
+  <div class="mt-5 flex items-center justify-between text-xs font-bold text-petrol"><span>Filter Packing Machinery</span><span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
   </div>
   </div>
   </div>
@@ -794,7 +794,7 @@
   </div>
   <div class="border-t border-white/10">
   <div class="container-shell flex flex-col gap-4 py-6 text-[.68rem] text-white/40 sm:flex-row sm:items-center sm:justify-between">
-  <p>Â© 2026 Renumed Pharmaceutical Labs. All rights reserved.
+  <p>&copy; 2026 Renumed Pharmaceutical Labs. All rights reserved.
   </p>
   <div class="flex flex-wrap gap-5"><a class="transition hover:text-white" href="/privacy/">Privacy Policy</a><a class="transition hover:text-white" href="/terms/">Terms of Use</a><a class="transition hover:text-white" href="/disclaimer/">Product Disclaimer</a>
   </div>

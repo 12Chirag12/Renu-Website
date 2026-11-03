@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
   <html lang="en" data-scroll-behavior="smooth">
-  <head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="/assets/js/main.js" defer></script><title>Products &amp; Formulations â€” Tablets &amp; Capsules | Renumed Pharmaceutical Labs</title><meta name="description" content="Explore Renumed Pharmaceutical Labs&#x27; solid oral dosage manufacturing capabilities â€” specialized in pharmaceutical tablets and capsules."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="/assets/js/main.js" defer></script><title>Products &amp; Formulations &mdash; Tablets &amp; Capsules | Renumed Pharmaceutical Labs</title><meta name="description" content="Explore Renumed Pharmaceutical Labs&#x27; solid oral dosage manufacturing capabilities &mdash; specialized in pharmaceutical tablets and capsules."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
   <header class="sticky top-0 z-50 relative border-b border-slate-200/80 bg-white/95 backdrop-blur-xl shadow-sm transition-all duration-200"><a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:rounded-lg focus:bg-navy focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
@@ -59,7 +59,7 @@
   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
   <div class="flex items-center gap-2.5"><span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-80 bg-cyan"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan shadow-[0_0_8px_#19b6cf]"></span></span><span class="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-slate-500">Annual Production Capacity</span>
   </div>
-<span class="self-start sm:self-auto rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-wider bg-cyan/15 text-petrol">Verified Commercial Scale â€¢ Per Annum Only</span>
+<span class="self-start sm:self-auto rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-wider bg-cyan/15 text-petrol">Verified Commercial Scale &bull; Per Annum Only</span>
   </div>
   <div class="mt-4 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
   <div class="display-face text-4xl sm:text-5xl font-extrabold text-navy tracking-tight tabular-nums font-mono"><span class="inline-block count-target" data-counter="1500" data-suffix="+">1,500+</span>
@@ -151,13 +151,13 @@
   <h4 class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-navy"><svg viewBox="0 0 24 24" class="h-4 w-4 text-cyan" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"></path><path d="m4 7.5 8 4.5 8-4.5M12 12v9"></path></svg>Approved Packaging Formats
   </h4>
   <ul class="mt-5 space-y-2.5">
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">âœ“</span><span>Alu-Alu Cold Form Blister Packaging (Maximum moisture barrier)</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Alu-Alu Cold Form Blister Packaging (Maximum moisture barrier)</span>
   </li>
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">âœ“</span><span>PVC / PVDC Blister Packaging (Crystal clear presentation)</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>PVC / PVDC Blister Packaging (Crystal clear presentation)</span>
   </li>
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">âœ“</span><span>Child-Resistant &amp; Senior-Friendly Blister Strips</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Child-Resistant &amp; Senior-Friendly Blister Strips</span>
   </li>
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">âœ“</span><span>High-Density Polyethylene (HDPE) Bottles with induction sealing</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>High-Density Polyethylene (HDPE) Bottles with induction sealing</span>
   </li>
   </ul>
   </div>
@@ -185,7 +185,7 @@
   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
   <div class="flex items-center gap-2.5"><span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-80 bg-petrol"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-petrol shadow-[0_0_8px_#086b78]"></span></span><span class="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-slate-500">Annual Production Capacity</span>
   </div>
-<span class="self-start sm:self-auto rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-wider bg-petrol/15 text-navy">Verified Commercial Scale • Per Annum Only</span>
+<span class="self-start sm:self-auto rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-wider bg-petrol/15 text-navy">Verified Commercial Scale &bull; Per Annum Only</span>
   </div>
   <div class="mt-4 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
   <div class="display-face text-4xl sm:text-5xl font-extrabold text-navy tracking-tight tabular-nums font-mono"><span class="inline-block count-target" data-counter="960" data-suffix="+">960+</span>
@@ -277,13 +277,13 @@
   <h4 class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-navy"><svg viewBox="0 0 24 24" class="h-4 w-4 text-cyan" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"></path><path d="m4 7.5 8 4.5 8-4.5M12 12v9"></path></svg>Approved Packaging Formats
   </h4>
   <ul class="mt-5 space-y-2.5">
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>Alu-Alu Cold Form Blister Packs for moisture-sensitive formulations</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Alu-Alu Cold Form Blister Packs for moisture-sensitive formulations</span>
   </li>
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>PVC/PVDC Blister Packs with foil backing</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>PVC/PVDC Blister Packs with foil backing</span>
   </li>
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>Wide-mouth HDPE Bottles with silica gel / molecular sieve desiccant caps</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Wide-mouth HDPE Bottles with silica gel / molecular sieve desiccant caps</span>
   </li>
-  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>Tamper-evident induction seal and outer carton packaging</span>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white"><svg class="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Tamper-evident induction seal and outer carton packaging</span>
   </li>
   </ul>
   </div>
@@ -317,13 +317,13 @@
   </div>
   </div>
   <ul class="mt-6 space-y-3 text-sm text-slate-600">
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">â€¢</span><span><strong>1,500+ Million Tablets / Annum:</strong> High-speed rotary compression output with automated weight verification.</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">&bull;</span><span><strong>1,500+ Million Tablets / Annum:</strong> High-speed rotary compression output with automated weight verification.</span>
   </li>
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">â€¢</span><span><strong>Film &amp; Enteric Polymer Coating:</strong> Complete moisture, light, and acid protection.</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">&bull;</span><span><strong>Film &amp; Enteric Polymer Coating:</strong> Complete moisture, light, and acid protection.</span>
   </li>
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">â€¢</span><span><strong>Modified Release Systems:</strong> Matrix tablets offering sustained 12h/24h therapeutic release.</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">&bull;</span><span><strong>Modified Release Systems:</strong> Matrix tablets offering sustained 12h/24h therapeutic release.</span>
   </li>
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">â€¢</span><span><strong>Multilayer Formulation:</strong> Physical barrier separation for dual-action combinations.</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-cyan font-bold">&bull;</span><span><strong>Multilayer Formulation:</strong> Physical barrier separation for dual-action combinations.</span>
   </li>
   </ul>
   <div class="mt-8 pt-5 border-t border-slate-200/70"><a class="inline-flex items-center gap-2 text-xs font-bold text-petrol transition hover:text-navy" href="/contact/?interest=Tablet%20Contract%20Manufacturing">Enquire for Tablet Formulations <svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m14 7 5 5-5 5"></path></svg></a>
@@ -339,13 +339,13 @@
   </div>
   </div>
   <ul class="mt-6 space-y-3 text-sm text-slate-600">
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">â€¢</span><span><strong>960+ Million Capsules / Annum:</strong> Precision automatic encapsulation for powder blends, micro-pellets, and granules.</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">&bull;</span><span><strong>960+ Million Capsules / Annum:</strong> Precision automatic encapsulation for powder blends, micro-pellets, and granules.</span>
   </li>
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">â€¢</span><span><strong>HPMC &amp; Gelatin Compatibility:</strong> Vegetarian and standard shells across all standard sizes (00 to 4).</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">&bull;</span><span><strong>HPMC &amp; Gelatin Compatibility:</strong> Vegetarian and standard shells across all standard sizes (00 to 4).</span>
   </li>
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">â€¢</span><span><strong>Pellet &amp; Granule Encapsulation:</strong> Enteric-coated micro-beads filled with high dosage accuracy.</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">&bull;</span><span><strong>Pellet &amp; Granule Encapsulation:</strong> Enteric-coated micro-beads filled with high dosage accuracy.</span>
   </li>
-  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">â€¢</span><span><strong>Sensitive API Protection:</strong> Low-moisture shells protecting moisture-labile actives from degradation.</span>
+  <li class="flex items-start gap-2.5"><span class="mt-1 text-petrol font-bold">&bull;</span><span><strong>Sensitive API Protection:</strong> Low-moisture shells protecting moisture-labile actives from degradation.</span>
   </li>
   </ul>
   <div class="mt-8 pt-5 border-t border-slate-200/70"><a class="inline-flex items-center gap-2 text-xs font-bold text-petrol transition hover:text-navy" href="/contact/?interest=Capsule%20Contract%20Manufacturing">Enquire for Capsule Formulations <svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m14 7 5 5-5 5"></path></svg></a>
@@ -398,7 +398,7 @@
   </div>
   <div class="border-t border-white/10">
   <div class="container-shell flex flex-col gap-4 py-6 text-[.68rem] text-white/40 sm:flex-row sm:items-center sm:justify-between">
-  <p>Â© 2026 Renumed Pharmaceutical Labs. All rights reserved.
+  <p>&copy; 2026 Renumed Pharmaceutical Labs. All rights reserved.
   </p>
   <div class="flex flex-wrap gap-5"><a class="transition hover:text-white" href="/privacy/">Privacy Policy</a><a class="transition hover:text-white" href="/terms/">Terms of Use</a><a class="transition hover:text-white" href="/disclaimer/">Product Disclaimer</a>
   </div>

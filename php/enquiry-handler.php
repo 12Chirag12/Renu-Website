@@ -73,6 +73,23 @@ if (!$fullName || !$companyName || !$emailValid || !$phoneValid || !$location ||
     exit;
 }
 
+// Load .env if present
+$envFile = __DIR__ . '/.env';
+if (!file_exists($envFile)) {
+    $envFile = dirname(__DIR__) . '/.env';
+}
+if (file_exists($envFile)) {
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if ($line && $line[0] !== '#' && strpos($line, '=') !== false) {
+            list($k, $v) = explode('=', $line, 2);
+            putenv(trim($k) . '=' . trim($v));
+            $_ENV[trim($k)] = trim($v);
+        }
+    }
+}
+
 // Recipient configuration
 $to = getenv('CONTACT_TO_EMAIL') ?: 'info@renumedpharma.com';
 $fromHost = !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : 'renumedpharma.com';

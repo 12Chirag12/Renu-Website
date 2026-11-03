@@ -36,13 +36,13 @@
   <div class="relative">
   <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
   <div class="inline-flex rounded-2xl bg-white p-1.5 shadow-md shadow-slate-200/60 border border-slate-200">
-  <button type="button" class="inline-flex items-center gap-3 rounded-xl px-6 py-3 text-sm font-bold transition-all duration-300 bg-navy text-white shadow-lg shadow-navy/20 scale-[1.02]"><span class="grid h-7 w-7 place-items-center rounded-lg text-xs font-bold bg-cyan text-navy">TB</span>Tablets Formulation
+  <button type="button" class="dosage-tab-btn inline-flex items-center gap-3 rounded-xl px-6 py-3 text-sm font-bold transition-all duration-300 bg-navy text-white shadow-lg shadow-navy/20 scale-[1.02]" data-dosage="tablets"><span class="grid h-7 w-7 place-items-center rounded-lg text-xs font-bold bg-cyan text-navy">TB</span>Tablets Formulation
   </button>
-  <button type="button" class="inline-flex items-center gap-3 rounded-xl px-6 py-3 text-sm font-bold transition-all duration-300 text-slate-600 hover:text-navy hover:bg-slate-50"><span class="grid h-7 w-7 place-items-center rounded-lg text-xs font-bold bg-slate-100 text-slate-500">CP</span>Capsules Formulation
+  <button type="button" class="dosage-tab-btn inline-flex items-center gap-3 rounded-xl px-6 py-3 text-sm font-bold transition-all duration-300 text-slate-600 hover:text-navy hover:bg-slate-50" data-dosage="capsules"><span class="grid h-7 w-7 place-items-center rounded-lg text-xs font-bold bg-slate-100 text-slate-500">CP</span>Capsules Formulation
   </button>
   </div>
   </div>
-  <div class="mt-10 animate-rise rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-10 lg:p-12">
+  <div id="dosage-panel-tablets" class="mt-10 animate-rise rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-10 lg:p-12">
   <div class="flex flex-col gap-6 border-b border-slate-100 pb-8 lg:flex-row lg:items-center lg:justify-between">
   <div>
   <div class="flex items-center gap-2.5"><span class="inline-flex items-center gap-1.5 rounded-full bg-cyan/15 px-3 py-1 text-[.7rem] font-bold uppercase tracking-wider text-petrol"><span class="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse"></span>Solid Oral Formulation</span><span class="text-xs font-semibold text-slate-400">Code: TB</span>
@@ -62,7 +62,7 @@
 <span class="self-start sm:self-auto rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-wider bg-cyan/15 text-petrol">Verified Commercial Scale â€¢ Per Annum Only</span>
   </div>
   <div class="mt-4 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
-  <div class="display-face text-4xl sm:text-5xl font-extrabold text-navy tracking-tight tabular-nums font-mono"><span class="inline-block ">0+</span>
+  <div class="display-face text-4xl sm:text-5xl font-extrabold text-navy tracking-tight tabular-nums font-mono"><span class="inline-block count-target" data-counter="1500" data-suffix="+">1,500+</span>
   </div>
   <div><span class="text-base sm:text-lg font-bold text-petrol block">Million Tablets <span class="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">/ annum</span></span><span class="text-xs text-slate-500">Installed multi-station rotary punching lines supporting multi-million commercial runs.</span>
   </div>
@@ -163,6 +163,132 @@
   </div>
   <div class="mt-6 border-t border-slate-200/80 pt-4">
   <div class="flex flex-wrap items-center gap-2"><span class="text-[.68rem] font-bold uppercase tracking-wider text-slate-400">Target Therapies:</span><span class="inline-block rounded-md bg-white px-2.5 py-1 text-[.72rem] font-semibold text-slate-700 border border-slate-200">Antibiotics &amp; Anti-infectives</span><span class="inline-block rounded-md bg-white px-2.5 py-1 text-[.72rem] font-semibold text-slate-700 border border-slate-200">Cardiovascular &amp; Antihypertensive</span><span class="inline-block rounded-md bg-white px-2.5 py-1 text-[.72rem] font-semibold text-slate-700 border border-slate-200">Analgesic &amp; Anti-inflammatory (NSAIDs)</span>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div id="dosage-panel-capsules" class="hidden mt-10 animate-rise rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xl shadow-slate-200/50 sm:p-10 lg:p-12">
+  <div class="flex flex-col gap-6 border-b border-slate-100 pb-8 lg:flex-row lg:items-center lg:justify-between">
+  <div>
+  <div class="flex items-center gap-2.5"><span class="inline-flex items-center gap-1.5 rounded-full bg-petrol/15 px-3 py-1 text-[.7rem] font-bold uppercase tracking-wider text-petrol"><span class="h-1.5 w-1.5 rounded-full bg-petrol animate-pulse"></span>Encapsulation Technology</span><span class="text-xs font-semibold text-slate-400">Code: CP</span>
+  </div>
+  <h3 class="display-face mt-3 text-2xl font-bold text-navy sm:text-3xl lg:text-4xl">Versatile Encapsulation for Powders, Pellets &amp; Granules
+  </h3>
+  <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">Precision capsule filling technology engineered for uniform fill weights, sensitive active pharmaceutical ingredients, and customized shell specifications.
+  </p>
+  </div>
+  <div class="shrink-0"><a class="btn-primary inline-flex items-center justify-center gap-2 rounded-xl bg-petrol px-6 py-3.5 text-sm font-bold text-white transition hover:bg-navy" href="/contact/?interest=Capsules%20Contract%20Manufacturing">Enquire for Capsules <svg viewBox="0 0 24 24" class="h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m14 7 5 5-5 5"></path></svg></a>
+  </div>
+  </div>
+  <div class="mt-8 rounded-2xl border p-6 sm:p-7 shadow-sm transition-all duration-300 border-petrol/30 bg-gradient-to-br from-mist/95 via-white to-petrol/10">
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+  <div class="flex items-center gap-2.5"><span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full opacity-80 bg-petrol"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-petrol shadow-[0_0_8px_#086b78]"></span></span><span class="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-slate-500">Annual Production Capacity</span>
+  </div>
+<span class="self-start sm:self-auto rounded-full px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-wider bg-petrol/15 text-navy">Verified Commercial Scale • Per Annum Only</span>
+  </div>
+  <div class="mt-4 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
+  <div class="display-face text-4xl sm:text-5xl font-extrabold text-navy tracking-tight tabular-nums font-mono"><span class="inline-block count-target" data-counter="960" data-suffix="+">960+</span>
+  </div>
+  <div><span class="text-base sm:text-lg font-bold text-petrol block">Million Capsules <span class="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">/ annum</span></span><span class="text-xs text-slate-500">Installed automatic precision encapsulation suites for powder blends and micro-pellets.</span>
+  </div>
+  </div>
+  <div class="mt-5 flex flex-wrap gap-2 pt-4 border-t border-slate-200/60"><span class="inline-flex items-center gap-1.5 rounded-lg bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs"><span class="h-1.5 w-1.5 rounded-full bg-petrol"></span>Sizes 00 to 4 Precision Filling</span><span class="inline-flex items-center gap-1.5 rounded-lg bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs"><span class="h-1.5 w-1.5 rounded-full bg-petrol"></span>HPMC Vegetarian &amp; Gelatin</span><span class="inline-flex items-center gap-1.5 rounded-lg bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs"><span class="h-1.5 w-1.5 rounded-full bg-petrol"></span>Pellets-in-Capsule (MUPS)</span><span class="inline-flex items-center gap-1.5 rounded-lg bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200/80 shadow-xs"><span class="h-1.5 w-1.5 rounded-full bg-petrol"></span>Inert Nitrogen Purging</span>
+  </div>
+  </div>
+  <div class="mt-12">
+  <div class="flex items-center justify-between">
+  <h4 class="text-xs font-bold uppercase tracking-[.14em] text-petrol">Supported Capsules Types &amp; Formats
+  </h4>
+<span class="text-xs text-slate-400">6 Specialized Variations</span>
+  </div>
+  <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="group relative rounded-2xl border border-slate-200/80 bg-mist/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-petrol/40 hover:bg-white hover:shadow-lg hover:shadow-petrol/5">
+  <div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-petrol shadow-sm border border-slate-100 transition-colors group-hover:bg-petrol/10 group-hover:text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"></path><path d="m4 7.5 8 4.5 8-4.5M12 12v9"></path></svg></span><span class="text-xs font-semibold text-slate-300">01</span>
+  </div>
+  <h5 class="mt-4 font-bold text-navy transition-colors group-hover:text-petrol">Hard Gelatin Capsules (HGC)
+  </h5>
+  <p class="mt-1.5 text-xs leading-5 text-slate-600">Standard pharmaceutical-grade gelatin shells with rapid disintegration in gastric fluid.
+  </p>
+  </div>
+  <div class="group relative rounded-2xl border border-slate-200/80 bg-mist/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-petrol/40 hover:bg-white hover:shadow-lg hover:shadow-petrol/5">
+  <div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-petrol shadow-sm border border-slate-100 transition-colors group-hover:bg-petrol/10 group-hover:text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.6 5.4L19 10l-5.4 1.6L12 17l-1.6-5.4L5 10l5.4-1.6L12 3Zm6 12 .7 2.3L21 18l-2.3.7L18 21l-.7-2.3L15 18l2.3-.7L18 15Z"></path></svg></span><span class="text-xs font-semibold text-slate-300">02</span>
+  </div>
+  <h5 class="mt-4 font-bold text-navy transition-colors group-hover:text-petrol">Vegetarian (HPMC) Capsules
+  </h5>
+  <p class="mt-1.5 text-xs leading-5 text-slate-600">Plant-derived hypromellose shells with low moisture content (&lt;7%), ideal for hygroscopic APIs.
+  </p>
+  </div>
+  <div class="group relative rounded-2xl border border-slate-200/80 bg-mist/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-petrol/40 hover:bg-white hover:shadow-lg hover:shadow-petrol/5">
+  <div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-petrol shadow-sm border border-slate-100 transition-colors group-hover:bg-petrol/10 group-hover:text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"></path><path d="m3 12 9 5 9-5M3 16l9 5 9-5"></path></svg></span><span class="text-xs font-semibold text-slate-300">03</span>
+  </div>
+  <h5 class="mt-4 font-bold text-navy transition-colors group-hover:text-petrol">Pellets-in-Capsule (MUPS)
+  </h5>
+  <p class="mt-1.5 text-xs leading-5 text-slate-600">Controlled-release micro-pellets and coated beads filled with precise multi-unit dosage accuracy.
+  </p>
+  </div>
+  <div class="group relative rounded-2xl border border-slate-200/80 bg-mist/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-petrol/40 hover:bg-white hover:shadow-lg hover:shadow-petrol/5">
+  <div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-petrol shadow-sm border border-slate-100 transition-colors group-hover:bg-petrol/10 group-hover:text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 2.8 8.1 7 10 4.2-1.9 7-5.5 7-10V6l-7-3Z"></path><path d="m9 12 2 2 4-4"></path></svg></span><span class="text-xs font-semibold text-slate-300">04</span>
+  </div>
+  <h5 class="mt-4 font-bold text-navy transition-colors group-hover:text-petrol">Delayed / Enteric Capsules
+  </h5>
+  <p class="mt-1.5 text-xs leading-5 text-slate-600">Acid-resistant capsule shells protecting acid-labile molecules without needing solvent coating.
+  </p>
+  </div>
+  <div class="group relative rounded-2xl border border-slate-200/80 bg-mist/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-petrol/40 hover:bg-white hover:shadow-lg hover:shadow-petrol/5">
+  <div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-petrol shadow-sm border border-slate-100 transition-colors group-hover:bg-petrol/10 group-hover:text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"></path><path d="M8 15h8"></path></svg></span><span class="text-xs font-semibold text-slate-300">05</span>
+  </div>
+  <h5 class="mt-4 font-bold text-navy transition-colors group-hover:text-petrol">Combination Fills
+  </h5>
+  <p class="mt-1.5 text-xs leading-5 text-slate-600">Dual filling capabilities such as tablet-in-capsule or multi-pellet formulations for combination therapy.
+  </p>
+  </div>
+  <div class="group relative rounded-2xl border border-slate-200/80 bg-mist/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-petrol/40 hover:bg-white hover:shadow-lg hover:shadow-petrol/5">
+  <div class="flex items-center justify-between"><span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-petrol shadow-sm border border-slate-100 transition-colors group-hover:bg-petrol/10 group-hover:text-petrol"><svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 4 4L19 6"></path></svg></span><span class="text-xs font-semibold text-slate-300">06</span>
+  </div>
+  <h5 class="mt-4 font-bold text-navy transition-colors group-hover:text-petrol">Banded &amp; Tamper-Evident
+  </h5>
+  <p class="mt-1.5 text-xs leading-5 text-slate-600">Hermetically sealed gelatin or HPMC liquid banding around the joint for tamper evidence and stability.
+  </p>
+  </div>
+  </div>
+  </div>
+  <div class="mt-10 grid gap-8 rounded-2xl bg-mist/60 p-6 sm:p-8 lg:grid-cols-2">
+  <div>
+  <h4 class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-navy"><svg viewBox="0 0 24 24" class="h-4 w-4 text-cyan" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>Technical &amp; Machine Specifications
+  </h4>
+  <div class="mt-5 space-y-3">
+  <div class="flex flex-col justify-between rounded-xl bg-white p-3.5 text-xs sm:flex-row sm:items-center border border-slate-200/70"><span class="font-semibold text-slate-500">Annual Capacity</span><span class="font-bold text-navy sm:text-right">960+ Million Capsules / annum</span>
+  </div>
+  <div class="flex flex-col justify-between rounded-xl bg-white p-3.5 text-xs sm:flex-row sm:items-center border border-slate-200/70"><span class="font-semibold text-slate-500">Available Sizes</span><span class="font-bold text-navy sm:text-right">Size 00, Size 0, Size 1, Size 2, Size 3, Size 4</span>
+  </div>
+  <div class="flex flex-col justify-between rounded-xl bg-white p-3.5 text-xs sm:flex-row sm:items-center border border-slate-200/70"><span class="font-semibold text-slate-500">Shell Appearance</span><span class="font-bold text-navy sm:text-right">Opaque, Transparent, Two-tone color combinations</span>
+  </div>
+  <div class="flex flex-col justify-between rounded-xl bg-white p-3.5 text-xs sm:flex-row sm:items-center border border-slate-200/70"><span class="font-semibold text-slate-500">Fill Formats</span><span class="font-bold text-navy sm:text-right">Powder blends, Granules, Micro-pellets, Mini-tablets</span>
+  </div>
+  <div class="flex flex-col justify-between rounded-xl bg-white p-3.5 text-xs sm:flex-row sm:items-center border border-slate-200/70"><span class="font-semibold text-slate-500">Moisture Levels</span><span class="font-bold text-navy sm:text-right">HPMC: 3-7% | Gelatin: 13-16% equilibrium</span>
+  </div>
+  <div class="flex flex-col justify-between rounded-xl bg-white p-3.5 text-xs sm:flex-row sm:items-center border border-slate-200/70"><span class="font-semibold text-slate-500">Quality Checks</span><span class="font-bold text-navy sm:text-right">Weight consistency, Shell integrity, Disintegration time</span>
+  </div>
+  </div>
+  </div>
+  <div class="flex flex-col justify-between">
+  <div>
+  <h4 class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.14em] text-navy"><svg viewBox="0 0 24 24" class="h-4 w-4 text-cyan" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"></path><path d="m4 7.5 8 4.5 8-4.5M12 12v9"></path></svg>Approved Packaging Formats
+  </h4>
+  <ul class="mt-5 space-y-2.5">
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>Alu-Alu Cold Form Blister Packs for moisture-sensitive formulations</span>
+  </li>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>PVC/PVDC Blister Packs with foil backing</span>
+  </li>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>Wide-mouth HDPE Bottles with silica gel / molecular sieve desiccant caps</span>
+  </li>
+  <li class="flex items-start gap-2.5 text-xs font-medium text-slate-700 bg-white p-3 rounded-xl border border-slate-200/70"><span class="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-petrol text-white text-[10px]">✓</span><span>Tamper-evident induction seal and outer carton packaging</span>
+  </li>
+  </ul>
+  </div>
+  <div class="mt-6 border-t border-slate-200/80 pt-4">
+  <div class="flex flex-wrap items-center gap-2"><span class="text-[.68rem] font-bold uppercase tracking-wider text-slate-400">Target Therapies:</span><span class="inline-block rounded-md bg-white px-2.5 py-1 text-[.72rem] font-semibold text-slate-700 border border-slate-200">Proton Pump Inhibitors (Enteric Pellets)</span><span class="inline-block rounded-md bg-white px-2.5 py-1 text-[.72rem] font-semibold text-slate-700 border border-slate-200">Antibiotics &amp; Cephalosporins</span><span class="inline-block rounded-md bg-white px-2.5 py-1 text-[.72rem] font-semibold text-slate-700 border border-slate-200">Probiotics &amp; Synbiotics</span>
   </div>
   </div>
   </div>

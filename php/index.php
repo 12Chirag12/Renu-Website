@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en" data-scroll-behavior="smooth">
   <head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/hero-manufacturing.png"/><link rel="stylesheet" href="/assets/css/style.css" />
   <script src="/assets/js/main.js" defer></script><title>Renumed Pharmaceutical Labs | Pharmaceutical Contract Manufacturing</title><meta name="description" content="Renumed Pharmaceutical Labs provides quality-focused pharmaceutical contract manufacturing, third-party production, and packaging services through disciplined, documented operations."/><meta name="robots" content="index, follow"/><meta property="og:title" content="Renumed Pharmaceutical Labs"/><meta property="og:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><meta property="og:site_name" content="Renumed Pharmaceutical Labs"/><meta property="og:locale" content="en_IN"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Renumed Pharmaceutical Labs"/><meta name="twitter:description" content="Quality-focused pharmaceutical contract manufacturing and business support."/><link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -401,7 +401,7 @@
   </div>
 <span class="rounded-full bg-cyan/15 px-2.5 py-0.5 text-[0.65rem] font-extrabold uppercase tracking-wider text-petrol border border-cyan/20">Verified Scale</span>
   </div>
-  <div class="mt-3 flex items-baseline gap-2.5"><span class="display-face text-4xl sm:text-5xl font-extrabold tracking-tight text-navy tabular-nums font-mono"><span class="inline-block ">0+</span></span><span class="text-sm sm:text-base font-bold text-petrol">Million Tablets <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">/ annum</span></span>
+  <div class="mt-3 flex items-baseline gap-2.5"><span class="display-face text-4xl sm:text-5xl font-extrabold tracking-tight text-navy tabular-nums font-mono"><span class="inline-block count-target" data-counter="1500" data-suffix="+">1,500+</span></span><span class="text-sm sm:text-base font-bold text-petrol">Million Tablets <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">/ annum</span></span>
   </div>
   <p class="mt-1 text-xs text-slate-500 leading-relaxed">Multi-station high-speed rotary compression supporting multi-million commercial runs.
   </p>
@@ -438,7 +438,7 @@
   </div>
 <span class="rounded-full bg-petrol/15 px-2.5 py-0.5 text-[0.65rem] font-extrabold uppercase tracking-wider text-navy border border-petrol/20">Verified Scale</span>
   </div>
-  <div class="mt-3 flex items-baseline gap-2.5"><span class="display-face text-4xl sm:text-5xl font-extrabold tracking-tight text-navy tabular-nums font-mono"><span class="inline-block ">0+</span></span><span class="text-sm sm:text-base font-bold text-petrol">Million Capsules <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">/ annum</span></span>
+  <div class="mt-3 flex items-baseline gap-2.5"><span class="display-face text-4xl sm:text-5xl font-extrabold tracking-tight text-navy tabular-nums font-mono"><span class="inline-block count-target" data-counter="960" data-suffix="+">960+</span></span><span class="text-sm sm:text-base font-bold text-petrol">Million Capsules <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">/ annum</span></span>
   </div>
   <p class="mt-1 text-xs text-slate-500 leading-relaxed">Automatic high-precision encapsulation suites for powder blends and micro-pellets.
   </p>

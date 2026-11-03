@@ -7,5 +7,6 @@ out
 npm-debug.log*
 PROJECT_MAP.txt
 CPANEL_VERCEL_SETUP_CHEATSHEET.txt
+renumed-upload.zip
 *.tsbuildinfo
 
